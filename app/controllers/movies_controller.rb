@@ -4,9 +4,8 @@ class MoviesController < ApplicationController
   end
 
   def show
-    authorize @movie
     @movie = Movie.find(params[:id])
-
+    authorize @movie
   end
 
   def new
