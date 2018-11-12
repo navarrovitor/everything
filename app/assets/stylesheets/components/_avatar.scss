@@ -17,8 +17,9 @@
   max-width: 200px;
   min-height: 84px;
   min-width: 84px;
+  border: 4px solid transparent;
 }
 
-.avatar-square-large:a {
-  border: 5px solid red;
+.avatar-square-large:hover {
+  border: 4px solid gray;
 }
