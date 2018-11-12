@@ -1,4 +1,4 @@
-class MoviePolicy < ApplicationPolicy
+class PointPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -21,4 +21,3 @@ class MoviePolicy < ApplicationPolicy
     return true
   end
 end
-
