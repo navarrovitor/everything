@@ -1,0 +1,25 @@
+@media screen and (max-width: 950px) {
+  .avatar-square {
+  width: 50px;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .avatar-square {
+  width: 40px;
+  }
+}
+
+.avatar-square-large {
+  height: 10vw;
+  width: 10vw;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 84px;
+  min-width: 84px;
+  border: 4px solid transparent;
+}
+
+.avatar-square-large:hover {
+  border: 4px solid gray;
+}
