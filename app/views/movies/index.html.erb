@@ -1,0 +1,8 @@
+<h1>All movies</h1>
+
+<% Movie.all.each do |movie| %>
+  <p> Title: <%= movie.title %> </p>
+  <p> Year: <%= movie.year %> </p>
+  <p> Cast: <%= movie.actors %> </p>
+  <p> Length: <%= movie.length %> minutes </p>
+<% end %>

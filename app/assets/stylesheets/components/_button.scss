@@ -1,0 +1,34 @@
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
+
+.btn-treehouse {
+  font-size: 1.3rem;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 2px;
+  font-weight: lighter;
+  background: #9900FF;
+}
+.btn-treehouse:hover {
+  opacity: 1;
+  background: #470077;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-red {
+  font-size: 1.8rem;
+  color: #141414;
+  padding: 10px 15px;
+  border-radius: 1px;
+  font-weight: normal;
+  background: #FFFFFF;
+}
+.btn-red:hover {
+  background: #9900FF;
+  text-decoration: none;
+  color: white;
+}
