@@ -1,5 +1,4 @@
 <div class="navbar-wagon blurry">
-  <div class="blurrer"></div>
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo.png", height: 50 %>
@@ -7,6 +6,7 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
+  <div class="blurrer"></div>
 
     <% if user_signed_in? %>
 
