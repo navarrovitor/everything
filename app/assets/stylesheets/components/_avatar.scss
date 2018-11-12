@@ -1,20 +1,24 @@
-.avatar {
-  width: 30px;
-  border-radius: 50%;
-}
-.avatar-large {
+@media screen and (max-width: 950px) {
+  .avatar-square {
   width: 50px;
-  border-radius: 50%;
+  }
 }
-.avatar-bordered {
-  width: 30px;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
+
+@media screen and (min-width: 950px) {
+  .avatar-square {
+  width: 40px;
+  }
 }
-.avatar-square {
-  width: 30px;
-  border-radius: 0px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
+
+.avatar-square-large {
+  height: 10vw;
+  width: 10vw;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 84px;
+  min-width: 84px;
+}
+
+.avatar-square-large:a {
+  border: 5px solid red;
 }
