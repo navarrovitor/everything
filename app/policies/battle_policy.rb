@@ -13,6 +13,10 @@ class BattlePolicy < ApplicationPolicy
     return true
   end
 
+  def landing?
+    return true
+  end
+
   def showmovies?
     return true
   end

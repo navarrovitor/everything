@@ -1,8 +1,5 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<!-- teste do cloudinary -->
-<!-- tenho que deletar depois -->
-<%= cl_image_tag("wghvi9gbxc0z0a1yniz3",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
-<!-- fim do teste do cloudinary -->
+<% if user_signed_in? %>
+  <%= render 'shared/cu' %>
+<% else %>
+  <%= render 'shared/landing_page' %>
+<% end %>

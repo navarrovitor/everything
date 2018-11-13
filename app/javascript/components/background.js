@@ -2,13 +2,7 @@ var canvas = document.getElementById('nokey'),
    can_w = parseInt(canvas.getAttribute('width')),
    can_h = parseInt(canvas.getAttribute('height')),
    ctx = canvas.getContext('2d');
-// console.log(canvas)
-// console.log(can_w)
-// console.log(can_h)
-// console.log(ctx)
 
-
-// console.log(typeof can_w);
 
 var ball = {
       x: 0,
@@ -20,11 +14,11 @@ var ball = {
       phase: 0
    },
    ball_color = {
-       r: 207,
-       g: 255,
-       b: 4
+       r: 185,
+       g: 0,
+       b: 255
    },
-   R = 2,
+   R = 3,
    balls = [],
    alpha_f = 0.03,
    alpha_phase = 0,
@@ -71,7 +65,7 @@ function randomArrayItem(arr){
 function randomNumFrom(min, max){
     return Math.random()*(max - min) + min;
 }
-// console.log(randomNumFrom(0, 10));
+console.log(randomNumFrom(0, 10));
 // Random Ball
 function getRandomBall(){
     var pos = randomArrayItem(['top', 'right', 'bottom', 'left']);
@@ -198,7 +192,7 @@ function getDisOf(b1, b2){
 
 // add balls if there a little balls
 function addBallIfy(){
-    if(balls.length < 20){
+    if(balls.length < 50){
         balls.push(getRandomBall());
     }
 }
@@ -254,12 +248,10 @@ goMovie();
 
 // Mouse effect
 canvas.addEventListener('mouseenter', function(){
-    console.log('mouseenter');
     mouse_in = true;
     balls.push(mouse_ball);
 });
 canvas.addEventListener('mouseleave', function(){
-    console.log('mouseleave');
     mouse_in = false;
     var new_balls = [];
     Array.prototype.forEach.call(balls, function(b){
@@ -273,5 +265,4 @@ canvas.addEventListener('mousemove', function(e){
     var e = e || window.event;
     mouse_ball.x = e.pageX;
     mouse_ball.y = e.pageY;
-    // console.log(mouse_ball);
 });
