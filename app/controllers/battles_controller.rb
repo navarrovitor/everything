@@ -1,11 +1,14 @@
 class BattlesController < ApplicationController
-
-
   def apitest
     @battle = Battle.new
     authorize @battle
 
     @keyword = params[:movie]
+  end
+
+  def landing
+    @battle = Battle.new
+    authorize @battle
   end
 
   def showmovies
