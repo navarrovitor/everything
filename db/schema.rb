@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2018_11_13_134244) do
 
   # These are extensions that must be enabled in order to support this database
@@ -20,6 +21,29 @@ ActiveRecord::Schema.define(version: 2018_11_13_134244) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  create_table "battles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.string "title"
+    t.integer "year"
+    t.string "director"
+    t.string "actors", default: [], array: true
+    t.integer "length"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "pic_url"
+  end
+
+  create_table "points", force: :cascade do |t|
+    t.integer "points", default: 0
+    t.bigint "user_id"
+    t.bigint "movie_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["movie_id"], name: "index_points_on_movie_id"
     t.index ["user_id"], name: "index_points_on_user_id"
   end
 
@@ -32,9 +56,11 @@ ActiveRecord::Schema.define(version: 2018_11_13_134244) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "points", "movies"
   add_foreign_key "points", "users"
 end

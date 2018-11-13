@@ -1,7 +1,58 @@
-/* Main navbar */
+.blurry .blurrer {
+  height: 50px + 10px;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  position: absolute;
+  overflow: hidden;
+
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  z-index: -500;
+
+  // background-image: url('https://picsum.photos/200/300/random');
+
+  // background-size: cover;
+}
+
+.blurry {
+  background: none;
+  color: white;
+  border: none;
+
+  .navbar-brand {
+    color: white;
+    font-weight: 600;
+    text-shadow: none;
+
+    &:hover {
+      color: #516FC3;
+    }
+  }
+
+  .navbar-nav>.open>a,
+  .navbar-nav>.active>a {
+    color: #8B6B45;
+
+    &:hover {
+      color: #F17B16;
+    }
+  }
+
+  .navbar-nav>li>a {
+    color: #F4AD33;
+    font-weight: 500;
+    text-shadow: none;
+
+    &:hover {
+      color: #F17B16;
+    }
+  }
+}
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
