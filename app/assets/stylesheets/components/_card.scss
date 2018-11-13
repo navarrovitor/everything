@@ -1,39 +1,29 @@
 .card {
   height: 80vh;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
   color: white;
   position: relative;
+  display: flex;
 }
 
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
-}
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
 .card-description {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background-color: rgba(0,0,0,0.9);  
+  background-color: black;  
   width: 100%;
   padding: 10px;
   text-align: center;
+  display: flex;
 }
 
 
 @media screen and (max-width: 950px) {
-  .card-description h2 {
+  h1 {
+    font-size: 1.5em;  
+  }
+  h2 {
   font-size: 1em;
   }
   .card-description p {
@@ -42,19 +32,14 @@
 }
 
 @media screen and (min-width: 950px) {
+  h1 {
+    font-size: 2.4em;  
+  }
   .card-description h2 {
   font-size: 1.6em;
   }
   .card-description p {
   font-size: 1em;
-  }
-  .hover-text {
-    h2 {
-      font-size: 1.6em;
-    }
-    :hover {
-      background-color: white;
-    }
   }
 }
 
@@ -68,7 +53,27 @@
   background: black;
   opacity: 0;
 }
+
+.hover-text {
+  padding: 2em;
+  color: #a200ff;
+  visibility: hidden;
+  text-align: center;
+  flex-grow: 1;
+}
+
 .card:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.card-right{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.card-left{
+  position: absolute;
+  left: 10px;
+  top: 10px;
 }
