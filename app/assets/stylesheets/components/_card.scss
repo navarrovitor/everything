@@ -1,38 +1,53 @@
 .card {
-  height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  height: 80vh;
   background-size: cover !important;
   background-position: center;
   color: white;
   position: relative;
+  // display: flex;
+  .btn-red, .btn-green, .card-description {
+    visibility: hidden;
+  }
 }
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
-}
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
+
 .card-description {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #a200ff;  
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.card-description h2 {
-  font-size: 24px;
+
+
+@media screen and (max-width: 950px) {
+  h1 {
+    font-size: 1.5em;  
+  }
+  h2 {
+  font-size: 1em;
+  }
+  .card-description p {
+  font-size: 0.8em;
+  }  
 }
-.card-description p {
-  font-size: 14px;
-  opacity: 0.7;
-  font-weight: lighter;
+
+@media screen and (min-width: 950px) {
+  h1 {
+    font-size: 2.4em;  
+  }
+  .card-description h2 {
+  font-size: 1.6em;
+  }
+  .card-description p {
+  font-size: 1em;
+  }
 }
+
 .card-link {
   position: absolute;
   top: 0;
@@ -43,6 +58,34 @@
   background: black;
   opacity: 0;
 }
-.card-link:hover {
-  opacity: 0.1;
+
+.hover-text {
+  padding: 2em;
+  color: #a200ff;
+  visibility: hidden;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    .btn-red, .btn-green, .card-description {
+      visibility: visible;
+    }
+}
+
+.card-right{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.card-left{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.recommendation {
+  height: 175px;
 }

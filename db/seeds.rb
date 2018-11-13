@@ -147,6 +147,8 @@ m.save
 
 puts "Created movie: #{m.title}"
 
+m = Movie.new
+
 
 
 
