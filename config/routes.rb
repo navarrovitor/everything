@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'new/create'
+  get 'new/show'
+  get 'new/edit'
+  get 'new/update'
+  get 'new/destroy'
   devise_for :users
 
   resources :movies
