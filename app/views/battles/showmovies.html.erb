@@ -1,0 +1,7 @@
+<div class="wrapper-showall">
+  <div class="container-showall">
+    <% @points.each do |point| %>
+      <h2> <%= point.movie.title %> &nbsp;&nbsp; --> &nbsp;&nbsp; <%= point.points  %>  </h2>
+    <% end %>
+  </div>
+</div>
