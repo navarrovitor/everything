@@ -1,5 +1,5 @@
 .footer {
-  background: white;
+  background: #141414;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,9 +7,9 @@
   padding: 0px 50px;
   color: rgba(162, 0, 255,0.7);
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  position: fixed;
   bottom: 0;
-  width: 100%
+  width: 100%;
+  font-size: 0.8em;
 }
 .footer-links {
   display: flex;
@@ -19,9 +19,9 @@
   color: rgb(162, 0, 255);
   opacity: 0.7;
   text-decoration: none;
-  font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
   opacity: 1;
 }
+

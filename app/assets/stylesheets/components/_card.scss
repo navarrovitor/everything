@@ -4,17 +4,17 @@
   background-position: center;
   color: white;
   position: relative;
-  display: flex;
-  .btn-purple {
+  // display: flex;
+  .btn-red, .btn-green, .card-description {
     visibility: hidden;
-  }  
+  }
 }
 
 .card-description {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background-color: black;  
+  background-color: #a200ff;  
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -69,7 +69,7 @@
 
 .card:hover {
     transform: scale(1.05);
-    .btn-purple {
+    .btn-red, .btn-green, .card-description {
       visibility: visible;
     }
 }
@@ -84,4 +84,8 @@
   position: absolute;
   left: 10px;
   top: 10px;
+}
+
+.recommendation {
+  height: 175px;
 }
