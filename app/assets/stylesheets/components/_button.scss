@@ -18,14 +18,18 @@
   font-size: 1.6rem;
   color: #141414;
   padding: 10px 15px;
-  border-radius: 1px;
-  font-weight: bold;
+  border-radius: 5px;
+  font-weight: bolder;
   background: #FFFFFF;
   margin: 1.6rem;
   text-decoration: none;
+  vertical-align: center;
+  p {
+    margin: 0px;
+  }
 }
 .btn-purple:hover {
   background: #a200ff;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
