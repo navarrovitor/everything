@@ -5,6 +5,9 @@
   color: white;
   position: relative;
   display: flex;
+  .btn-purple {
+    visibility: hidden;
+  }  
 }
 
 .card-description {
@@ -16,6 +19,8 @@
   padding: 10px;
   text-align: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -64,6 +69,9 @@
 
 .card:hover {
     transform: scale(1.05);
+    .btn-purple {
+      visibility: visible;
+    }
 }
 
 .card-right{
