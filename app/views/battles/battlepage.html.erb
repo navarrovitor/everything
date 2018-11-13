@@ -1,0 +1,46 @@
+<div class="wrapper-combat">
+  <div class="container-title text-center">
+    <h1>Combat</h1>
+  </div>
+  <div class="container-fight">
+    <div class="movie-1">
+      <div class="movie-header" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.2) 50%), url(<%=@movie1.pic_url%>);">
+      </div>
+      <div class="movie-details">
+        <h1 class="movie-title text-center"> <%= @movie1.title %> </h1>
+        <p> <%= @movie1_seen ? "Y" : "N" %> </p>
+        <form action="/point" method="post">
+          <input name="_method" type="hidden" value="patch"/>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <%= hidden_field_tag :movie1_id, @movie1.id %>
+          <%= hidden_field_tag :movie2_id, @movie2.id %>
+          <%= hidden_field_tag :user_id, current_user.id %>
+          <%= hidden_field_tag :vote_result, 1 %>
+          <input type="submit" id="vote1-btn" class="btn btn-success" value="Vote">
+        </form>
+      </div>
+    </div>
+    <div class="fightsymbol">
+      <%= image_tag "https://svgsilh.com/svg/310788.svg", class: "battle-symbol"%>
+    </div>
+    <div class="movie-2">
+        <div class="movie-header" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.2) 50%), url(<%=@movie2.pic_url%>);">
+        </div>
+        <div class="movie-details">
+          <h1 class="movie-title text-center"> <%= @movie2.title %> </h1>
+          <p> <%= @movie2_seen ? "Y" : "N" %> </p>
+          <form action="/point" method="post">
+            <input name="_method" type="hidden" value="patch"/>
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+            <%= hidden_field_tag :movie1_id, @movie1.id %>
+            <%= hidden_field_tag :movie2_id, @movie2.id %>
+            <%= hidden_field_tag :user_id, current_user.id %>
+            <%= hidden_field_tag :vote_result, 2 %>
+            <input type="submit" id="vote2-btn" class="btn btn-success" value="Vote">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
