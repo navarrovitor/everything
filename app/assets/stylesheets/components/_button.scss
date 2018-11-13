@@ -28,7 +28,13 @@
     margin: 0px;
   }
 }
-.btn-purple:hover {
+
+a.btn-purple:focus {
+  color: black;
+  text-decoration: none;
+}
+
+a.btn-purple:hover {
   background: #a200ff;
   color: white;
   text-decoration: none;
