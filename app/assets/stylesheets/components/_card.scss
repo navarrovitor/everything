@@ -47,9 +47,16 @@
   }
   .card-description p {
   font-size: 1em;
-  }  
+  }
+  .hover-text {
+    h2 {
+      font-size: 1.6em;
+    }
+    :hover {
+      background-color: white;
+    }
+  }
 }
-
 
 .card-link {
   position: absolute;
