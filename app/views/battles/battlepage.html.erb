@@ -37,6 +37,7 @@
         <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
         <div class="card poster1" id="vote1-btn" onclick="javascript:event.target.parentNode.submit();" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
           <a href="#" class="btn-red card-left switch-movie" id="switchmovie1">NÃO VI</a>
+          <div class="btn btn-danger switch-movie" id="switchmovie2">Haven't seen this shit</div>
           <div class="card-description">
               <div class="name">
                 <h2 class="movie-title"><%= @movie1[0].title %></h2>
@@ -71,4 +72,5 @@
       </form>
 
     </div>
+</div>
 </div>
