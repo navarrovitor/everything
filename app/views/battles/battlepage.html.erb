@@ -34,7 +34,7 @@
         <%= hidden_field_tag :user_id, current_user.id %>
         <%= hidden_field_tag :vote_result, 1 %>
         <input type="text" name="movie1_id" id="movie1-select1" style="display: none;">
-        <input type="text" name="movie2_id" id="movie1-select2" style="display: none;">
+        <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
         <div class="card poster1" id="vote1-btn" onclick="javascript:event.target.parentNode.submit();">
           <a href="#" class="btn-red card-left switch-movie" id="switchmovie1">NÃO VI</a>
           <div class="card-description">
@@ -56,7 +56,7 @@
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <%= hidden_field_tag :user_id, current_user.id %>
         <%= hidden_field_tag :vote_result, 2 %>
-        <input type="text" name="movie1_id" id="movie2-select1" style="display: none;">
+        <input type="text" name="movie1_id" id="movie1-select2" style="display: none;">
         <input type="text" name="movie2_id" id="movie2-select2" style="display: none;">
         <div class="card poster2" id="vote2-btn" onclick="javascript:event.target .parentNode.submit();">
 
