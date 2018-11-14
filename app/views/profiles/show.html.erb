@@ -1,12 +1,19 @@
 <h1>User Profile</h1>
 
-<% if current_user == @user %>
 
-  <h2><%=@profile.username %></h2>
+<div class="profile-area">
 
-  <% else %>
+<% current_user.profile.photo = cl_image_tag("wghvi9gbxc0z0a1yniz3",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
 
-  <h2>errou</h2>
+<%= current_user.profile.photo %>
 
-<%end%>
+<%= current_user.email %>
+
+<%= current_user.profile.username %>
+
+
+</div>
+
+
 
