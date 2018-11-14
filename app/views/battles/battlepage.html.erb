@@ -15,48 +15,82 @@
   <h1 id="movie2-count">0</h1>
 </div>
 
-<div class="wrapper-combat">
-  <div class="container-fight">
-    <div class="movie-1">
-      <div class="movie-header">
-        <%= image_tag " ", class: "poster"%>
+
+
+
+
+
+
+<div class="container">
+    <h1 style="text-align: center">Qual é o melhor filme?</h1>
+
+<input type="text" name="movie1_id" id="movie1-select1" style="display: none;">
+            <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
+            <input type="submit" id="vote1-btn" class="btn btn-success" value="Vote">
+
+
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
+
+          <a href="#" class="btn-red card-left switch-movie" id="switchmovie1">NÃO VI</a>
+          <div class="card-description">
+              <div class="name">
+                <h2 class="movie-title"><%= @movie1[0].title %></h2>
+                <p>Director here<%= @movie1[0].director %> ( year here <%= @movie1[0].year %>)</p>
+              </div>
+          </div>
+        </div>
       </div>
-      <div class="movie-details">
-        <h1 class="movie-title text-center"> <%= @movie1[0].title %> </h1>
-        <div class="btn btn-danger switch-movie" id="switchmovie1">Haven't seen this shit</div>
-        <form action="/point" method="post">
-          <input name="_method" type="hidden" value="patch"/>
-          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-          <%= hidden_field_tag :user_id, current_user.id %>
-          <%= hidden_field_tag :vote_result, 1 %>
-          <input type="text" name="movie1_id" id="movie1-select1" style="display: none;">
-          <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
-          <input type="submit" id="vote1-btn" class="btn btn-success" value="Vote">
-        </form>
+      <div class="col-xs-6">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,643,1000_AL_.jpg');">
+          <a href="#" class="btn-red card-right switch-movie" id="switchmovie2">NÃO VI</p></a>
+          <div class="card-description">
+              <h2 class="movie-title"><%= @movie2[0].title %></h2>
+              <p>Director here<%= @movie2[0].director %> ( year here <%= @movie2[0].year %>)</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+
     </div>
-    <div class="fightsymbol">
-      <%= image_tag "https://svgsilh.com/svg/310788.svg", class: "battle-symbol"%>
-    </div>
-    <div class="movie-2">
+</div>
+
+
+
+    <div class="container-fight">
+      <div class="movie-1">
         <div class="movie-header">
           <%= image_tag " ", class: "poster"%>
         </div>
         <div class="movie-details">
-          <h1 class="movie-title text-center"> <%= @movie2[0].title %> </h1>
-          <div class="btn btn-danger switch-movie" id="switchmovie2">Haven't seen this shit</div>
+          <h1 class="movie-title text-center"> <%= @movie1[0].title %> </h1>
           <form action="/point" method="post">
             <input name="_method" type="hidden" value="patch"/>
             <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
             <%= hidden_field_tag :user_id, current_user.id %>
-            <%= hidden_field_tag :vote_result, 2 %>
-            <input type="text" name="movie1_id" id="movie1-select2" style="display: none;">
-            <input type="text" name="movie2_id" id="movie2-select2" style="display: none;">
-            <input type="submit" id="vote1-btn" class="btn btn-success" value="Vote">
+            <%= hidden_field_tag :vote_result, 1 %>
           </form>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
+
+      <div class="movie-2">
+          <div class="movie-header">
+            <%= image_tag " ", class: "poster"%>
+          </div>
+          <div class="movie-details">
+            <h1 class="movie-title text-center"> <%= @movie2[0].title %> </h1>
+            <form action="/point" method="post">
+              <input name="_method" type="hidden" value="patch"/>
+              <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+              <%= hidden_field_tag :user_id, current_user.id %>
+              <%= hidden_field_tag :vote_result, 2 %>
+              <input type="text" name="movie1_id" id="movie1-select2" style="display: none;">
+              <input type="text" name="movie2_id" id="movie2-select2" style="display: none;">
+              <input type="submit" id="vote1-btn" class="btn btn-success" value="Vote">
+            </form>
+          </div>
+        </div>
+      </div>
