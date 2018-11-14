@@ -12,20 +12,6 @@
   }
 }
 
-.container-fight {
-  margin: 0px 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.movie-1 {
-  flex: 0 0 30%;
-  height: 500px;
-  background-color: gray;
-  margin: 50px 50px;
-}
-
 .fightsymbol {
   flex: 0 0 20%;
   height: 500px;
@@ -34,20 +20,8 @@
 
 }
 
-.movie-2 {
-  flex: 0 0 30%;
-  height: 500px;
-  background-color: gray;
-  margin: 50px 50px;
-}
-
 .movie-header {
   height: 350px;
-}
-
-.poster {
-  margin-left: 120px;
-  width: 250px;
 }
 
 .movie-details {

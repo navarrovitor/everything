@@ -9,8 +9,8 @@ let configData = null;
 let baseImageURL = null;
 let keyWord1 = document.getElementsByClassName("movie-title")[0].innerHTML.trim()
 let keyWord2 = document.getElementsByClassName("movie-title")[1].innerHTML.trim()
-let poster1 = document.getElementsByClassName("poster")[0]
-let poster2 = document.getElementsByClassName("poster")[1]
+let poster1 = document.getElementsByClassName("poster1")[0].style.backgroundImage
+let poster2 = document.getElementsByClassName("poster2")[0].style.backgroundImage
 let apiKey = '9d3a38e6213072912904012a81c6dddc'
 
 url = ''.concat(baseURL, 'configuration?api_key=', apiKey);
