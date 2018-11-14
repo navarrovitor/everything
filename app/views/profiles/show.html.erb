@@ -3,14 +3,25 @@
 
 <div class="profile-area">
 
+  <!-- cloudinary ainda não automatizado -->
+
 <% current_user.profile.photo = cl_image_tag("wghvi9gbxc0z0a1yniz3",
       width: 150, height: 150, crop: :thumb, gravity: :face) %>
 
 <%= current_user.profile.photo %>
 
+    <!-- fim do cloudinary  -->
+
 <%= current_user.email %>
 
 <%= current_user.profile.username %>
+
+<!-- this if is to only show update profile and delete account to the current_user -->
+<% if current_user == @profile.user %>
+<% end %>
+<!-- fim do if -->
+
+
 
 
 </div>
