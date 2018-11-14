@@ -17,3 +17,6 @@ p.movie = Movie.all.sample
 p.points = 5
 p.user_id = 1
 p.save
+
+
+p "Points generated"
