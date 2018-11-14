@@ -9,8 +9,8 @@ let configData = null;
 let baseImageURL = null;
 let keyWord1 = document.getElementsByClassName("movie-title")[0].innerHTML.trim()
 let keyWord2 = document.getElementsByClassName("movie-title")[1].innerHTML.trim()
-let poster1 = document.getElementsByClassName("poster")[0]
-let poster2 = document.getElementsByClassName("poster")[1]
+let poster1 = document.getElementsByClassName("poster1")[0]
+let poster2 = document.getElementsByClassName("poster2")[0]
 let apiKey = '9d3a38e6213072912904012a81c6dddc'
 
 url = ''.concat(baseURL, 'configuration?api_key=', apiKey);
@@ -30,7 +30,9 @@ fetch(url)
     .then(result=>result.json())
     .then((data)=>{
         moviePoster = data.results[0].poster_path
-        poster1.src = baseImageURL + posterSize + moviePoster
+        let img_url1 = baseImageURL + posterSize + moviePoster
+        poster1.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('${img_url1}')`
+        // poster1.src = baseImageURL + posterSize + moviePoster
     })
 
     url = ''.concat(baseURL, 'search/movie?api_key=', apiKey, '&query=', keyWord2);
@@ -39,7 +41,8 @@ fetch(url)
     .then(result=>result.json())
     .then((data)=>{
         moviePoster = data.results[0].poster_path
-        poster2.src = baseImageURL + posterSize + moviePoster
+        let img_url2 = baseImageURL + posterSize + moviePoster
+        poster2.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('${img_url2}')`
     })
 })
 
@@ -91,7 +94,8 @@ movie1SwitchBtn.addEventListener("click", function() {
       .then(result=>result.json())
       .then((data)=>{
           moviePoster = data.results[0].poster_path
-          poster1.src = baseImageURL + posterSize + moviePoster
+          let img_url1 = baseImageURL + posterSize + moviePoster
+          poster1.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('${img_url1}')`
       })
   })
 });
@@ -122,7 +126,8 @@ movie2SwitchBtn.addEventListener("click", function() {
       .then(result=>result.json())
       .then((data)=>{
           moviePoster = data.results[0].poster_path
-          poster2.src = baseImageURL + posterSize + moviePoster
+          let img_url2 = baseImageURL + posterSize + moviePoster
+          poster2.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('${img_url2}')`
       })
   })
 });
