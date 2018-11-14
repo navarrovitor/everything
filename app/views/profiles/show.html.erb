@@ -1,2 +1,12 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<h1>User Profile</h1>
+
+<% if current_user == @user %>
+
+  <h2><%=@profile.username %></h2>
+
+  <% else %>
+
+  <h2>errou</h2>
+
+<%end%>
+
