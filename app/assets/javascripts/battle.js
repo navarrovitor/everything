@@ -42,7 +42,7 @@ fetch(url)
     .then((data)=>{
         moviePoster = data.results[0].poster_path
         let img_url2 = baseImageURL + posterSize + moviePoster
-        poster1.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('${img_url2}')`
+        poster2.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('${img_url2}')`
     })
 })
 
