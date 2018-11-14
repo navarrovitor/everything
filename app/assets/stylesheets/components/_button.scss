@@ -4,22 +4,28 @@
   padding: 10px 15px;
   border-radius: 5px;
   font-weight: 600;
-  background: #23CE6B;
-  margin: 1.6rem;
+  background: #1DB954;
+  margin: 0px;
   text-decoration: none;
   vertical-align: center;
   p {
     margin: 0px;
   }
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
 a.btn-green:focus {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
+.btn-green:hover {
+  font-size: 1.8rem;
+  transition: 400ms;
+  background-color: #1ED760;
+}
+
 a.btn-green:hover {
-  background: #a200ff;
   color: white;
   text-decoration: none;
 }
@@ -30,22 +36,28 @@ a.btn-green:hover {
   padding: 10px 15px;
   border-radius: 5px;
   font-weight: 600;
-  background: #CB0000;
-  margin: 1.6rem;
+  background: #E50913;
+  margin: 0;
   text-decoration: none;
   vertical-align: center;
   p {
     margin: 0px;
   }
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+}
+
+.btn-red:hover {
+  transition: 400ms;
+  font-size: 1.7rem;
+  background-color: #FF0915;
 }
 
 a.btn-red:focus {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 a.btn-red:hover {
-  background: #a200ff;
   color: white;
   text-decoration: none;
 }

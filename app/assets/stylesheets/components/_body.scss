@@ -8,10 +8,18 @@ body {
 h1, h2, h3, h4, h5 {
 	font-family: 'Work Sans', sans-serif;
 	text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+}
+
+h1, h2 {
+	font-weight: 600;
 }
 
 p {
 	font-weight: lighter;
+	text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
 .title {
