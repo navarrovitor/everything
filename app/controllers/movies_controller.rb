@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = policy_scope(Movie)
+    @movies = policy_scope(Movie).order("title")
   end
 
   def show

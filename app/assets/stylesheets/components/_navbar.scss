@@ -12,9 +12,6 @@
   -ms-filter: blur(10px);
   z-index: -500;
 
-  // background-image: url('https://picsum.photos/200/300/random');
-
-  // background-size: cover;
 }
 
 .blurry {
@@ -54,10 +51,11 @@
 .navbar-wagon {
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 30px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width:100%;
 }
 
 /* Logo */

@@ -4,7 +4,6 @@ class BattlesController < ApplicationController
     authorize @battle
 
     @keyword = params[:movie]
-
   end
 
   def landing
@@ -17,7 +16,7 @@ class BattlesController < ApplicationController
     authorize @battle
 
     @user = current_user
-    @points = @user.points
+    @points = @user.points.order('points DESC')
   end
 
   def battlepage
@@ -29,35 +28,24 @@ class BattlesController < ApplicationController
     movies_seen = Movie.all.select { |movie| @user.movies.include?(movie) }
     movies_not_seen = Movie.all.select { |movie| !@user.movies.include?(movie) }
 
-    if movies_not_seen.length > 1
-      roll = rand
-      if roll > 0.5
-        @movie1 = movies_seen.sample
-        @movie1_seen = true
-        movies_seen.delete(@movie1)
-      else
-        @movie1 = movies_not_seen.sample
-        @movie1_seen = false
-        movies_not_seen.delete(@movie1)
-      end
+    @movie1 = []
+    @movie2 = []
 
-      roll = rand
-      if roll > 0.5
-        @movie2 = movies_seen.sample
-        @movie2_seen = true
-        movies_seen.delete(@movie2)
-      else
-        @movie2 = movies_not_seen.sample
-        @movie2_seen = false
-        movies_not_seen.delete(@movie2)
+    10.times do
+      if movies_not_seen.length > 2
+        roll = rand
+
+        if roll > 0.5
+          @movie1 << movies_seen.sample
+        else
+          @movie1 << movies_not_seen.sample
+        end
+        if roll > 0.5
+          @movie2 << movies_seen.sample
+        else
+          @movie2 << movies_not_seen.sample
+        end
       end
-    else
-      @movie1 = movies_seen.sample
-      @movie1_seen = true
-      movies_seen.delete(@movie1)
-      @movie2 = movies_seen.sample
-      @movie2_seen = true
-      movies_seen.delete(@movie2)
     end
   end
 end
