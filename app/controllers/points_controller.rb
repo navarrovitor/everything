@@ -31,6 +31,12 @@ class PointsController < ApplicationController
     moviewinner = Movie.find(moviewinner)
     movieloser = Movie.find(movieloser)
 
+    moviewinner.battles_won += 1
+    moviewinner.battles_total += 1
+    movieloser.battles_total += 1
+    moviewinner.save
+    movieloser.save
+
     moviewinnerseen = user.movies.include?(moviewinner)
     movieloserseen = user.movies.include?(movieloser)
 

@@ -1,2 +1,39 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<h1>User Profile</h1>
+
+
+<div class="profile-area">
+
+  <!-- cloudinary ainda não automatizado -->
+
+ <!-- current_user.profile.photo = cl_image_tag("wghvi9gbxc0z0a1yniz3",
+      width: 150, height: 150, crop: :thumb, gravity: :face)
+ current_user.profile.photo  -->
+
+    <!-- fim do cloudinary  -->
+
+
+
+
+
+<!-- this if is to only show update profile and delete account to the current_user -->
+<% if current_user == @profile.user %>
+
+<%= current_user.email %>
+
+<%= current_user.profile.username %>
+
+
+<%= cl_image_tag("wghvi9gbxc0z0a1yniz3",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+  <%= link_to "Update Profile", "#", class: "btn btn-primary" %>
+  <%= link_to "Delete Account", "#", class: "btn btn-danger" %>
+<% end %>
+<!-- fim do if -->
+
+
+
+
+</div>
+
+
+
