@@ -94,7 +94,8 @@ movie1SwitchBtn.addEventListener("click", function() {
       .then(result=>result.json())
       .then((data)=>{
           moviePoster = data.results[0].poster_path
-          poster1.src = baseImageURL + posterSize + moviePoster
+          let img_url1 = baseImageURL + posterSize + moviePoster
+          poster1.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('${img_url1}')`
       })
   })
 });
@@ -125,7 +126,8 @@ movie2SwitchBtn.addEventListener("click", function() {
       .then(result=>result.json())
       .then((data)=>{
           moviePoster = data.results[0].poster_path
-          poster2.src = baseImageURL + posterSize + moviePoster
+          let img_url2 = baseImageURL + posterSize + moviePoster
+          poster2.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('${img_url2}')`
       })
   })
 });

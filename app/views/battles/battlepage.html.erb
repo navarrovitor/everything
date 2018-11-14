@@ -34,10 +34,9 @@
         <%= hidden_field_tag :user_id, current_user.id %>
         <%= hidden_field_tag :vote_result, 1 %>
         <input type="text" name="movie1_id" id="movie1-select1" style="display: none;">
-        <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
-        <div class="card poster1" id="vote1-btn" onclick="javascript:event.target.parentNode.submit();" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
+        <input type="text" name="movie2_id" id="movie1-select2" style="display: none;">
+        <div class="card poster1" id="vote1-btn" onclick="javascript:event.target.parentNode.submit();">
           <a href="#" class="btn-red card-left switch-movie" id="switchmovie1">NÃO VI</a>
-          <div class="btn btn-danger switch-movie" id="switchmovie2">Haven't seen this shit</div>
           <div class="card-description">
               <div class="name">
                 <h2 class="movie-title"><%= @movie1[0].title %></h2>
@@ -57,9 +56,9 @@
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <%= hidden_field_tag :user_id, current_user.id %>
         <%= hidden_field_tag :vote_result, 2 %>
-        <input type="text" name="movie1_id" id="movie1-select1" style="display: none;">
-        <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
-        <div class="card poster2" id="vote2-btn" onclick="javascript:event.target .parentNode.submit();" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
+        <input type="text" name="movie1_id" id="movie2-select1" style="display: none;">
+        <input type="text" name="movie2_id" id="movie2-select2" style="display: none;">
+        <div class="card poster2" id="vote2-btn" onclick="javascript:event.target .parentNode.submit();">
 
           <a href="#" class="btn-red card-right switch-movie" id="switchmovie2">NÃO VI</a>
           <div class="card-description">
