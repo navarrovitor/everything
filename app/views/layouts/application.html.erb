@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type => "image/x-icon" %>
     <title>Everything</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -14,6 +15,7 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+<<<<<<< HEAD
     <%#= render 'shared/footer' %>
     <header class="masthead">
       <div class="container d-flex h-100 align-items-center">
@@ -28,6 +30,9 @@
         Your Browser Don't Support Canvas
     </canvas>
  -->
+=======
+    <%= render 'shared/footer' %>
+>>>>>>> a023bf292fe9be02715973dbd275f435e1ec8c4a
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

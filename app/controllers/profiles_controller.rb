@@ -5,14 +5,15 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @profile = Profile.new(params [profile_params])
+    @profile = Profile.new(params[profile_params])
+    @profile.user = current_user
     profile.save
     redirect_to profile_path(profile)
     authorize @profile
   end
 
   def show
-    @profile = Profile.find (params[:id] )
+    @profile = Profile.find(params[:id])
     authorize @profile
   end
 
@@ -38,6 +39,6 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-  params.require(:profile).permit(:username, :photo)
+  params.require(:profile).permit(:username, :photo, :user_id)
   end
 end

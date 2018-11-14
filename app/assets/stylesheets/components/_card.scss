@@ -1,35 +1,39 @@
 .card {
-  height: 80vh;
+  height: 70vh;
   background-size: cover !important;
   background-position: center;
-  color: white;
+  color: #white;
   position: relative;
-  // display: flex;
   .btn-red, .btn-green, .card-description {
     visibility: hidden;
   }
+  margin-top: 15px;
 }
 
 .card-description {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background-color: #a200ff;  
+  background-color: rgba(162,0,255,0.8);
   width: 100%;
   padding: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  p {
+  font-weight: 400;
+  }
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
 
 @media screen and (max-width: 950px) {
   h1 {
-    font-size: 1.5em;  
+    font-size: 2em;
   }
   h2 {
-  font-size: 1em;
+  font-size: 1.1em;
   }
   .card-description p {
   font-size: 0.8em;
@@ -38,10 +42,10 @@
 
 @media screen and (min-width: 950px) {
   h1 {
-    font-size: 2.4em;  
+    font-size: 2.8em;  
   }
   .card-description h2 {
-  font-size: 1.6em;
+  font-size: 1.3em;
   }
   .card-description p {
   font-size: 1em;
@@ -61,14 +65,14 @@
 
 .hover-text {
   padding: 2em;
-  color: #a200ff;
+  color: white;
   visibility: hidden;
   text-align: center;
-  flex-grow: 1;
 }
 
 .card:hover {
     transform: scale(1.05);
+    transition: 400ms;
     .btn-red, .btn-green, .card-description {
       visibility: visible;
     }
@@ -76,16 +80,23 @@
 
 .card-right{
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 15px;
+  top: 15px;
 }
 
 .card-left{
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 15px;
+  top: 15px;
 }
 
 .recommendation {
   height: 175px;
+  .card-right, .card-left {
+  right: 10px;
+  top: 10px;
+  }
+  .card-description {
+    height: 100%;
+  }
 }
