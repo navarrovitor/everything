@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>Everything</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -14,7 +14,20 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <%= render 'shared/footer' %>
+    <%#= render 'shared/footer' %>
+    <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="text-center margins">
+          <h1 class="text-uppercase">Everything</h1>
+          <h2 class="margins text-center">The only place in the galaxy for your recommendations.</h2>
+          <%= link_to "Create your account", new_user_registration_path, class:"btn btn-primary js-scroll-trigger index-da-massa"%>
+        </div>
+      </div>
+    </header>
+    <canvas id="nokey" width="750" height="800">
+        Your Browser Don't Support Canvas
+    </canvas>
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
