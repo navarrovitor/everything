@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_13_223515) do
+ActiveRecord::Schema.define(version: 2018_11_14_201005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,27 +20,13 @@ ActiveRecord::Schema.define(version: 2018_11_13_223515) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "movies", force: :cascade do |t|
-    t.string "title"
-    t.integer "year"
-    t.string "director"
-    t.string "actors", default: [], array: true
-    t.integer "length"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "pic_url"
-    t.integer "rating"
-    t.integer "battles_won", default: 0
-    t.integer "battles_total", default: 0
-  end
-
   create_table "points", force: :cascade do |t|
     t.integer "points", default: 0
     t.bigint "user_id"
-    t.bigint "movie_id"
+    t.bigint "thing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["movie_id"], name: "index_points_on_movie_id"
+    t.index ["thing_id"], name: "index_points_on_thing_id"
     t.index ["user_id"], name: "index_points_on_user_id"
   end
 
@@ -53,6 +39,14 @@ ActiveRecord::Schema.define(version: 2018_11_13_223515) do
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
+  create_table "things", force: :cascade do |t|
+    t.string "name"
+    t.string "genre"
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -62,12 +56,11 @@ ActiveRecord::Schema.define(version: 2018_11_13_223515) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin"
-    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "points", "movies"
+  add_foreign_key "points", "things"
   add_foreign_key "points", "users"
   add_foreign_key "profiles", "users"
 end

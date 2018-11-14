@@ -1,9 +1,9 @@
 <div class="additional-info" style="display: none;">
   <% @movie1.each do |movie| %>
-    <h1 class="movie1-titles"> <%= movie.title %> </h1>
+    <h1 class="movie1-titles"> <%= movie.name %> </h1>
   <% end %>
   <% @movie2.each do |movie| %>
-    <h1 class="movie2-titles"> <%= movie.title %> </h1>
+    <h1 class="movie2-titles"> <%= movie.name %> </h1>
   <% end %>
   <% @movie1.each do |movie| %>
     <h1 class="movie1-ids"> <%= movie.id %> </h1>
@@ -22,7 +22,7 @@
         <%= image_tag " ", class: "poster"%>
       </div>
       <div class="movie-details">
-        <h1 class="movie-title text-center"> <%= @movie1[0].title %> </h1>
+        <h1 class="movie-title text-center"> <%= @movie1[0].name %> </h1>
         <div class="btn btn-danger switch-movie" id="switchmovie1">Haven't seen this shit</div>
         <form action="/point" method="post">
           <input name="_method" type="hidden" value="patch"/>
@@ -43,7 +43,7 @@
           <%= image_tag " ", class: "poster"%>
         </div>
         <div class="movie-details">
-          <h1 class="movie-title text-center"> <%= @movie2[0].title %> </h1>
+          <h1 class="movie-title text-center"> <%= @movie2[0].name %> </h1>
           <div class="btn btn-danger switch-movie" id="switchmovie2">Haven't seen this shit</div>
           <form action="/point" method="post">
             <input name="_method" type="hidden" value="patch"/>

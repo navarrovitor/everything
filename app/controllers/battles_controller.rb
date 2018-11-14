@@ -25,8 +25,10 @@ class BattlesController < ApplicationController
 
     @user = current_user
 
-    movies_seen = Movie.all.select { |movie| @user.movies.include?(movie) }
-    movies_not_seen = Movie.all.select { |movie| !@user.movies.include?(movie) }
+    movies = Thing.all.select { |thing| thing.category == "Movie" }
+
+    movies_seen = movies.select { |movie| @user.things.include?(movie) }
+    movies_not_seen = movies.select { |movie| !@user.things.include?(movie) }
 
     @movie1 = []
     @movie2 = []
@@ -47,5 +49,6 @@ class BattlesController < ApplicationController
         end
       end
     end
+
   end
 end
