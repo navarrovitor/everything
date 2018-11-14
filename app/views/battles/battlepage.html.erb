@@ -24,7 +24,7 @@
 <div class="container">
 
   <h1 style="text-align: center">Qual é o melhor filme?</h1>
-
+  <br>
   <div class="row">
     <div class="col-xs-6">
 
@@ -35,8 +35,7 @@
         <%= hidden_field_tag :vote_result, 1 %>
         <input type="text" name="movie1_id" id="movie1-select1" style="display: none;">
         <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
-        <div class="card poster1" id="vote1-btn" onclick="javascript:this.parentNode.submit();" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
-
+        <div class="card poster1" id="vote1-btn" onclick="javascript:event.target.parentNode.submit();" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
           <a href="#" class="btn-red card-left switch-movie" id="switchmovie1">NÃO VI</a>
           <div class="card-description">
               <div class="name">
@@ -59,9 +58,9 @@
         <%= hidden_field_tag :vote_result, 2 %>
         <input type="text" name="movie1_id" id="movie1-select1" style="display: none;">
         <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
-        <div class="card poster2" id="vote2-btn" onclick="javascript:this.parentNode.submit();" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
+        <div class="card poster2" id="vote2-btn" onclick="javascript:event.target .parentNode.submit();" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
 
-          <a href="#" class="btn-red card-left switch-movie" id="switchmovie2">NÃO VI</a>
+          <a href="#" class="btn-red card-right switch-movie" id="switchmovie2">NÃO VI</a>
           <div class="card-description">
               <div class="name">
                 <h2 class="movie-title"><%= @movie2[0].title %></h2>
