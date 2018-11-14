@@ -35,12 +35,12 @@ class BattlesController < ApplicationController
       if movies_not_seen.length > 2
         roll = rand
 
-        if roll > 0.5
+        if roll > 0.85
           @movie1 << movies_seen.sample
         else
           @movie1 << movies_not_seen.sample
         end
-        if roll > 0.5
+        if roll > 0.85
           @movie2 << movies_seen.sample
         else
           @movie2 << movies_not_seen.sample

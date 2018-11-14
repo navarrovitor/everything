@@ -1,8 +1,24 @@
-<h1>All movies</h1>
-
-<% Movie.all.each do |movie| %>
-  <p> Title: <%= movie.title %> </p>
-  <p> Year: <%= movie.year %> </p>
-  <p> Cast: <%= movie.actors %> </p>
-  <p> Length: <%= movie.length %> minutes </p>
-<% end %>
+<div class="wrapper-showall">
+  <div class="container-showall">
+    <table id="tablemovies">
+      <% @movies.each do |movie| %>
+        <tr class="each-movie">
+          <td class="table-movie-name"> <%= movie.title %> </td>
+          <td class="table-movie-battlestotal">
+            <% if movie.battles_total != 0  && !movie.battles_total.nil? %>
+              <%=movie.battles_total%>
+            <% else %>
+              0
+            <% end %>
+          <td class="table-movie-battleswon">
+            <% if movie.battles_total != 0  && !movie.battles_total.nil? %>
+              <%=100*(movie.battles_won.to_f/movie.battles_total).round(2)%>%
+            <% else %>
+              -
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
