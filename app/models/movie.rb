@@ -2,5 +2,5 @@ class Movie < ApplicationRecord
   has_many :points
   has_many :users, through: :points
 
-  validates :movie, presence: true
+  validates :title, presence: true
 end
