@@ -1,19 +1,9 @@
 Rails.application.routes.draw do
-  get 'profiles/new'
-  get 'profiles/create'
-  get 'profiles/show'
-  get 'profiles/edit'
-  get 'profiles/update'
-  get 'profiles/destroy'
-  get 'new/create'
-  get 'new/show'
-  get 'new/edit'
-  get 'new/update'
-  get 'new/destroy'
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations' }
 
   resources :movies
   resources :profiles, except:[:index]
+
 
   # resources :points
   patch 'point', to: 'points#update', as: 'updatepoints'

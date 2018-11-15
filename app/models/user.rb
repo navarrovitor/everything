@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :points
   has_many :movies, through: :points
   has_one :profile, dependent: :destroy
+  mount_uploader :photo, PhotoUploader
 end

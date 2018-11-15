@@ -1,2 +1,18 @@
 <h1>Profiles#edit</h1>
 <p>Find me in app/views/profiles/edit.html.erb</p>
+
+<%= simple_form_for(@profile) do |f| %>
+<div class="form-inputs">
+  <%= f.username :username %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+
+
+<% end %>
+
+<!-- adicionar um username default para o user -->
