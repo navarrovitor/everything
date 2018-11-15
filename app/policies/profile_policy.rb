@@ -3,6 +3,10 @@ class ProfilePolicy < ApplicationPolicy
     return true
   end
 
+  def index?
+    return true
+  end
+
   def create?
     record.user == user
   end
