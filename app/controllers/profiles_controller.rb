@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   def new
-    @profile = Profile.new
+    @profile = Profile.new(user: current_user)
     authorize @profile
   end
 
@@ -31,7 +31,7 @@ class ProfilesController < ApplicationController
 
   def destroy
     @profile = Profile.find(params[:id])
-    @profile.destroy
+    @profile.user.destroy
     redirect_to root_path
     authorize @profile
   end

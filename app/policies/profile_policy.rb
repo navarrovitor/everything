@@ -4,20 +4,14 @@ class ProfilePolicy < ApplicationPolicy
   end
 
   def create?
-    if record.user == user?
-      return true
-    end
+    record.user == user
   end
 
   def update?
-    if record.user == user?
-      return true
-    end
+    record.user == user
   end
 
   def destroy?
-    if record.user == user?
-      return true
-    end
+    record.user == user
   end
 end

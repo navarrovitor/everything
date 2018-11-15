@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
+  before_action :create_profile
+
 
   include Pundit
 
@@ -19,5 +21,14 @@ class ApplicationController < ActionController::Base
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
+  end
+
+  def create_profile
+    return if current_user.nil?
+    return if !current_user.profile.nil?
+    profile = Profile.new
+    profile.user = current_user
+    profile.save
+    redirect_to profile_path(profile)
   end
 end
