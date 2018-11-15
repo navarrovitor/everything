@@ -36,14 +36,19 @@ class BattlesController < ApplicationController
         roll = rand
 
         if roll > 0.85
-          @movie1 << movies_seen.sample
+          movie = movies_seen.sample
+          @movie1 << movie if movie.present?
         else
-          @movie1 << movies_not_seen.sample
+          movie = movies_not_seen.sample
+          @movie1 << movie if movie.present?
         end
+
         if roll > 0.85
-          @movie2 << movies_seen.sample
+          movie = movies_seen.sample
+          @movie2 << movie if movie.present?
         else
-          @movie2 << movies_not_seen.sample
+          movie = movies_not_seen.sample
+          @movie2 << movie if movie.present?
         end
       end
     end
