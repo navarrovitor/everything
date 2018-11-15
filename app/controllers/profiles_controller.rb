@@ -1,8 +1,13 @@
-# class ProfilesController < ApplicationController
+class ProfilesController < ApplicationController
 #   def new
 #     @profile = Profile.new(user: current_user)
 #     authorize @profile
 #   end
+
+  def index
+    @profiles = Profile.all
+    authorize @profiles
+  end
 
 #   def create
 #     @profile = Profile.new(params[profile_params])
@@ -41,4 +46,4 @@
 #   def profile_params
 #   params.require(:profile).permit(:username, :photo, :user_id)
 #   end
-# end
+end

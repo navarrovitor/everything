@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
 
   resources :movies
-  resources :profiles, except:[:index]
+  resources :profiles
 
 
   # resources :points
