@@ -8,7 +8,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
-gem 'cloudinary'
+gem 'cloudinary', '1.9.1'
 gem 'carrierwave', '~> 1.2'
 
 gem 'autoprefixer-rails'
