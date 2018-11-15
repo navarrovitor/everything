@@ -1,9 +1,6 @@
-// Specific CSS for your home-page
 .masthead {
-  // position: relative;
   height: calc(100vh - 170px);
   min-height: 35rem;
-
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -14,16 +11,6 @@
   background-color:transparent;
   z-index: -7;
 }
-.masthead h1 {
-  font-family: 'Lobster', cursive;
-  font-size: 4.5rem;
-  line-height: 4.5rem;
-  letter-spacing: 0.8rem;
-
-}
-.masthead h2 {
-    font-size: 1rem;
-}
 .margins {
     margin-left: auto!important;
     margin-right: auto!important;
@@ -32,9 +19,6 @@
   .masthead h1 {
     font-size: 6rem;
     line-height: 6rem;
-  }
-  .masthead h2 {
-    font-size: 1.5rem;
   }
 }
 @media (min-width: 992px) {
@@ -47,14 +31,12 @@
     line-height: 8.5rem;
     letter-spacing: 0.8rem;
   }
-  .masthead h2 {
-    font-size: 2rem;
-  }
 }
 .btn {
   -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
+  margin-top: 10px;
   font-family: 'Arimo', sans-serif;
   font-size: 80%;
   text-transform: uppercase;
@@ -62,15 +44,15 @@
   border: 0;
 }
 .btn-primary {
-  background-color: #64a19d;
+  background-color: #ad00d1;
 }
 
 .btn-primary:hover {
-  background-color: #4f837f;
+  background-color: #7a00aa;
 }
 
 .btn-primary:focus {
-  background-color: #4f837f;
+  background-color: #7a00aa;
   color: white;
 }
 
