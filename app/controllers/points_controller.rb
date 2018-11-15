@@ -58,13 +58,9 @@ class PointsController < ApplicationController
       loser_point.save
     end
 
-    if winner_point.points >= loser_point.points
-      winner_point.points += 1
+    
+      winner_point.points += loser_point.points + 1
       winner_point.save
-    else
-      winner_point.points = loser_point.points + 1
-      winner_point.save
-    end
 
     redirect_to battlepage_path
   end
