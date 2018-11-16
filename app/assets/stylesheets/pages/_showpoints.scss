@@ -1,7 +1,11 @@
 .wrapper-showall {
-  height: 200vh;
+  min-height: 80vh;
   background-color: black;
   padding: 50px 400px;
+}
+
+.container-nothing {
+  margin-top: 150px;
 }
 
 .container-showall {
