@@ -21,7 +21,7 @@
           <% if current_user.photo.filename.nil? %>
             <%= image_tag "anonymous.png", class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <% else %>
-            <%= cl_image_tag(current_user.photo, crop: :thumb, gravity: :face, class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown") %>
+            <%= cl_image_tag(current_user.photo, crop: :thumb, gravity: :face, class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown")%>
           <% end %>
           <i class="fas fa-caret-down" data-toggle="dropdown"></i>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
