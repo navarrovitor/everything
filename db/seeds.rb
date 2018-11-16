@@ -1,5 +1,3 @@
-# Movie Example: Back to the Future
-
 p = Point.new
 p.movie = Movie.all.sample
 p.points = 5

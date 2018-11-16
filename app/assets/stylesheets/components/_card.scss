@@ -37,12 +37,12 @@
   }
   .card-description p {
   font-size: 0.8em;
-  }  
+  }
 }
 
 @media screen and (min-width: 950px) {
   h1 {
-    font-size: 2.8em;  
+    font-size: 2.8em;
   }
   .card-description h2 {
   font-size: 1.3em;
@@ -76,6 +76,7 @@
     .btn-red, .btn-green, .card-description {
       visibility: visible;
     }
+    cursor: pointer;
 }
 
 .card-right{

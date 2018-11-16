@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_13_223515) do
+ActiveRecord::Schema.define(version: 2018_11_15_232634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_223515) do
     t.integer "rating"
     t.integer "battles_won", default: 0
     t.integer "battles_total", default: 0
+    t.integer "relevance"
   end
 
   create_table "points", force: :cascade do |t|
@@ -45,8 +46,8 @@ ActiveRecord::Schema.define(version: 2018_11_13_223515) do
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string "username", default: "username"
-    t.string "photo", default: "wghvi9gbxc0z0a1yniz3"
+    t.string "username"
+    t.string "photo"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_223515) do
     t.datetime "updated_at", null: false
     t.boolean "admin"
     t.string "photo"
+    t.integer "not_seen", default: [], array: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
