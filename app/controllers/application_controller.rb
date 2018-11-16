@@ -80,7 +80,10 @@ class ApplicationController < ActionController::Base
   def relevance(array1, array2)
     distance = euclidean_distance(array1, array2)
     intersection_size = (array1 & array2).size
-    relevance = distance / intersection_size
-    return relevance
+    unless distance == nil
+      relevance = intersection_size / distance
+      return relevance
+    end
+    return nil
   end
 end
