@@ -85,7 +85,7 @@
 
 
 .navbar-link {
-  color: white;
+  color: rgb(162,0,255);
   margin-left: 20px;
   text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
   font-weight: 400;
@@ -94,7 +94,7 @@
 
 .navbar-link:hover {
   text-decoration: none;
-  color: rgb(162,0,255);
+  color: white;
 }
 
 /* Dropdown menu */
@@ -103,6 +103,7 @@
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
 }
+
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
