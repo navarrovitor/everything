@@ -53,6 +53,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def default_url_options
+    { host: ENV["HOST"] || "localhost:3000" }
+  end
+
   def euclidean_distance(array1, array2)
     # gives the vector distance of two arrays
     # item is axis, index is value
