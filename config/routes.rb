@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
 
   authenticated :user do
-    root 'battles#battlepage', as: :authenticated_root
+    root 'battles#showmovies', as: :authenticated_root
   end
 
   resources :movies
   resources :profiles
+  resources :users, only: [:index, :show]
 
 
   # resources :points
