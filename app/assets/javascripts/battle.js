@@ -60,6 +60,9 @@ movie1SwitchBtn = document.getElementById("switchmovie1")
 movie2SwitchBtn = document.getElementById("switchmovie2")
 movie1Name = document.getElementsByClassName("movie-title")[0]
 movie2Name = document.getElementsByClassName("movie-title")[1]
+moviesNotSeen = document.getElementById("movies-not-seen")
+moviesNotSeenList1 = document.getElementById("movies-not-seen-list1")
+moviesNotSeenList2 = document.getElementById("movies-not-seen-list2")
 
 movie1Counter = parseInt(movie1Count.innerHTML,10)
 movie2Counter = parseInt(movie2Count.innerHTML,10)
@@ -70,6 +73,10 @@ movie1Id2.value = movie1Ids[movie1Counter].innerHTML
 movie2Id2.value = movie2Ids[movie2Counter].innerHTML
 
 movie1SwitchBtn.addEventListener("click", function() {
+  moviesNotSeen.innerHTML = moviesNotSeen.innerHTML + movie1Ids[movie1Count.innerHTML].innerHTML
+  moviesNotSeenList1.value = moviesNotSeen.innerHTML
+  moviesNotSeenList2.value = moviesNotSeen.innerHTML
+
   movie1Count.innerHTML = (parseInt(movie1Count.innerHTML,10)+1).toString()
   movie1Counter = parseInt(movie1Count.innerHTML,10)
 
@@ -101,6 +108,10 @@ movie1SwitchBtn.addEventListener("click", function() {
 });
 
 movie2SwitchBtn.addEventListener("click", function() {
+  moviesNotSeen.innerHTML = moviesNotSeen.innerHTML + " " + movie2Ids[movie2Count.innerHTML].innerHTML
+  moviesNotSeenList1.value = moviesNotSeen.innerHTML
+  moviesNotSeenList2.value = moviesNotSeen.innerHTML
+
   movie2Count.innerHTML = (parseInt(movie2Count.innerHTML,10)+1).toString()
   movie2Counter = parseInt(movie2Count.innerHTML,10)
 

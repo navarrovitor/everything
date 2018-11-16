@@ -5,8 +5,27 @@ class ProfilesController < ApplicationController
   end
 
   def index
-    @profiles = Profile.all
-    authorize @profiles
+    @profiles = policy_scope(Profile)
+
+    user = current_user
+    @other_users = User.all.reject { |user| user == current_user}
+
+    @relevances = []
+
+    t1 = []
+    user.points.order('points DESC').each do |point|
+      t1 << point.movie.title
+    end
+
+    @other_users.each do |otheruser|
+      t2 = []
+      otheruser.points.order('points DESC').each do |point|
+        t2 << point.movie.title
+      end
+
+      @relevances << relevance(t1, t2).round(2)
+    end
+
   end
 
   def create
