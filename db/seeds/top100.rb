@@ -20,11 +20,11 @@ m.relevance = 7
 m.save
 # -------------------------
 # Movie 4
-m = Movie.new
-m.title = 'Avengers: Infinity War'
-m.year = 2018
-m.relevance = 7
-m.save
+# m = Movie.new
+# m.title = 'Avengers: Infinity War'
+# m.year = 2018
+# m.relevance = 7
+# m.save
 # -------------------------
 # Movie 5
 m = Movie.new
@@ -55,11 +55,11 @@ m.relevance = 10
 m.save
 # -------------------------
 # Movie 9
-m = Movie.new
-m.title = 'The Godfather: Part II'
-m.year = 1974
-m.relevance = 9
-m.save
+# m = Movie.new
+# m.title = 'The Godfather: Part II'
+# m.year = 1974
+# m.relevance = 9
+# m.save
 # -------------------------
 # Movie 10
 m = Movie.new
@@ -111,11 +111,11 @@ m.relevance = 9
 m.save
 # -------------------------
 # Movie 17
-m = Movie.new
-m.title = "Star Wars Episode V: The Empire Strikes Back"
-m.year = 1980
-m.relevance = 9
-m.save
+# m = Movie.new
+# m.title = "Star Wars Episode V: The Empire Strikes Back"
+# m.year = 1980
+# m.relevance = 9
+# m.save
 # -------------------------
 # Movie 18
 m = Movie.new
@@ -125,11 +125,11 @@ m.relevance = 10
 m.save
 # -------------------------
 # Movie 19
-m = Movie.new
-m.title = "The Silence of the Lambs"
-m.year = 1991
-m.relevance = 9
-m.save
+# m = Movie.new
+# m.title = "The Silence of the Lambs"
+# m.year = 1991
+# m.relevance = 9
+# m.save
 # -------------------------
 # Movie 20
 m = Movie.new
@@ -138,75 +138,75 @@ m.year = 2014
 m.relevance = 9
 m.save
 # -------------------------
-# Movie 21
-m = Movie.new
-m.title = "Modern Times"
-m.year = 1936
-m.relevance = 7
-m.save
-# -------------------------
-# Movie 22
+# # Movie 21
+# m = Movie.new
+# m.title = "Modern Times"
+# m.year = 1936
+# m.relevance = 7
+# m.save
+# # -------------------------
+# # Movie 22
 m = Movie.new
 m.title = 'Back to the Future'
 m.year = 1985
 m.relevance = 8
 m.save
-# -------------------------
-# Movie 23
+# # -------------------------
+# # Movie 23
 m = Movie.new
 m.title = "Whiplash"
 m.year = 2014
 m.relevance = 7
 m.save
-# -------------------------
-# Movie 24
-m = Movie.new
-m.title = 'Raiders of the Lost Ark'
-m.year = 1981
-m.relevance = 8
-m.save
-# -------------------------
-# Movie 25
-m = Movie.new
-m.title = "The Lion King"
-m.year = 1994
-m.relevance = 9
-m.save
-# -------------------------
-# Movie 26
-m = Movie.new
-m.title = 'Memento'
-m.year = 2000
-m.relevance = 6
-m.save
-# -------------------------
-# Movie 27
-m = Movie.new
-m.title = "The Shining"
-m.year = 1980
-m.relevance = 7
-m.save
-# -------------------------
-# Movie 28
-m = Movie.new
-m.title = 'Django Unchained'
-m.year = 2012
-m.relevance = 7
-m.save
-# -------------------------
-# Movie 29
-m = Movie.new
-m.title = "Reservoir Dogs"
-m.year = 1992
-m.relevance = 7
-m.save
-# -------------------------
-# Movie 30
-m = Movie.new
-m.title = 'A Clockword Orange'
-m.year = 1974
-m.relevance = 6
-m.save
+# # -------------------------
+# # Movie 24
+# m = Movie.new
+# m.title = 'Raiders of the Lost Ark'
+# m.year = 1981
+# m.relevance = 8
+# m.save
+# # -------------------------
+# # Movie 25
+# m = Movie.new
+# m.title = "The Lion King"
+# m.year = 1994
+# m.relevance = 9
+# m.save
+# # -------------------------
+# # Movie 26
+# m = Movie.new
+# m.title = 'Memento'
+# m.year = 2000
+# m.relevance = 6
+# m.save
+# # -------------------------
+# # Movie 27
+# m = Movie.new
+# m.title = "The Shining"
+# m.year = 1980
+# m.relevance = 7
+# m.save
+# # -------------------------
+# # Movie 28
+# m = Movie.new
+# m.title = 'Django Unchained'
+# m.year = 2012
+# m.relevance = 7
+# m.save
+# # -------------------------
+# # Movie 29
+# m = Movie.new
+# m.title = "Reservoir Dogs"
+# m.year = 1992
+# m.relevance = 7
+# m.save
+# # -------------------------
+# # Movie 30
+# m = Movie.new
+# m.title = 'A Clockword Orange'
+# m.year = 1974
+# m.relevance = 6
+# m.save
 # # -------------------------
 # # Movie 31
 # m = Movie.new
@@ -244,11 +244,11 @@ m.save
 # m.save
 # # -------------------------
 # # Movie 36
-# m = Movie.new
-# m.title = 'Jurassic Park'
-# m.year = 1993
-# m.relevance = 9
-# m.save
+m = Movie.new
+m.title = 'Jurassic Park'
+m.year = 1993
+m.relevance = 9
+m.save
 # # -------------------------
 # # Movie 37
 # m = Movie.new
