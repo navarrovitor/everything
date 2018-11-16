@@ -20,15 +20,15 @@ class BattlesController < ApplicationController
   end
 
   def battlepage
-    repeat_probability = 0.4
-
     @battle = Battle.new
     authorize @battle
 
     @user = current_user
 
-    movies_seen = Movie.all.select { |movie| @user.movies.include?(movie) }
-    movies_not_seen = Movie.all.select { |movie| !@user.movies.include?(movie) }
+    movies_seen = Movie.all.select { |movie| @user.movies.include?(movie) && !@user.not_seen.include?(movie.id) }
+    movies_not_seen = Movie.all.select { |movie| !@user.movies.include?(movie) && !@user.not_seen.include?(movie.id) }
+    repeat_probability = (movies_seen.length.to_f / Movie.all.length)
+
 
     # movies_seen_relevance = 0
     # movies_seen.each do |movie|
@@ -52,56 +52,35 @@ class BattlesController < ApplicationController
 
     @movie1 = []
     @movie2 = []
-    invalid_movies = []
-
-    @user.not_seen.each do |movie|
-      invalid_movies << Movie.find(movie)
-    end
 
     10.times do
-      if movies_not_seen.length > 2
+      if movies_seen.length > 2
         roll = rand
 
-        if roll > 1 - repeat_probability
+        if roll < repeat_probability
           movie = movies_seen.sample
-          while invalid_movies.include?(movie)
-            movie = movies_seen.sample
-          end
-          @movie1 << movie if movie.present?
+          @movie1 << movie if movie.present? && !@movie1.include?(movie) && !@movie2.include?(movie)
         else
           movie = movies_not_seen.sample
-          while invalid_movies.include?(movie)
-            movie = movies_not_seen.sample
-          end
-          @movie1 << movie if movie.present?
+          @movie1 << movie if movie.present? && !@movie1.include?(movie) && !@movie2.include?(movie)
         end
 
-        if roll > 1 - repeat_probability
+        if roll < repeat_probability
           movie = movies_seen.sample
-          while invalid_movies.include?(movie)
-            movie = movies_seen.sample
-          end
-          @movie2 << movie if movie.present?
+          @movie2 << movie if movie.present? && !@movie1.include?(movie) && !@movie2.include?(movie)
         else
           movie = movies_not_seen.sample
-          while invalid_movies.include?(movie)
-            movie = movies_not_seen.sample
-          end
-          @movie2 << movie if movie.present?
+          @movie2 << movie if movie.present? && !@movie1.include?(movie) && !@movie2.include?(movie)
         end
-
       else
 
         movie = movies_not_seen.sample
-        @movie1 << movie if movie.present?
+        @movie1 << movie if movie.present? && !@movie1.include?(movie) && !@movie2.include?(movie)
 
         movie = movies_not_seen.sample
-        @movie2 << movie if movie.present?
+        @movie2 << movie if movie.present? && !@movie1.include?(movie) && !@movie2.include?(movie)
 
       end
-
-      invalid_movies << @movie1
-      invalid_movies << @movie2
     end
   end
 end

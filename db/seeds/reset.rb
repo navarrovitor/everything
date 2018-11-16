@@ -7,3 +7,5 @@ Movie.all.each do |movie|
 end
 
 `rails db:seed:top100`
+
+p 'User voting records reset concluded'
