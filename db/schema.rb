@@ -64,8 +64,8 @@ ActiveRecord::Schema.define(version: 2018_11_16_130131) do
     t.datetime "updated_at", null: false
     t.boolean "admin"
     t.string "photo"
-    t.integer "not_seen", default: [], array: true
     t.string "username"
+    t.integer "not_seen", default: [], array: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
