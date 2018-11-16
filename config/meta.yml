@@ -1,0 +1,5 @@
+meta_product_name: "Everything"
+meta_title: "Everything - Get great recommendations, easily"
+meta_description: "Are you tired of getting recommended things that aren't as good as you thought? Everything learns what you like and gives smart and precise recommendations!"
+meta_image: "cover.png"                       # should exist in `app/assets/images/`
+twitter_account: "@everythng_me"   # required for Twitter Cards
