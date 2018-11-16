@@ -32,9 +32,6 @@ class ProfilesController < ApplicationController
         @relevances << relevance(t1, t2).round(2)
       end
     end
-
-
-
   end
 
   def create
