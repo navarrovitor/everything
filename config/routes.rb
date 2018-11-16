@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   get 'apitest', to: 'battles#apitest', as: 'apitest'
 
   # get 'landing', to: 'battles#landing', as: 'landing_page'
-  root to: 'pages#componentstest'
+  root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
