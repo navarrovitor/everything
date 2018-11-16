@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
 
+  authenticated :user do
+    root 'battles#battlepage', as: :authenticated_root
+  end
+
   resources :movies
   resources :profiles
 
