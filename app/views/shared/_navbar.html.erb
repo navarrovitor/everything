@@ -12,8 +12,8 @@
 
       <!-- Links when logged in -->
       <%= link_to "BATTLE!", battlepage_path, class: "navbar-link" %>
-      <%= link_to "Your movies", "#", class: "navbar-link" %>
-      <%= link_to "Your friends", "#", class: "navbar-link" %>
+      <%= link_to "Your movies", playershow_path, class: "navbar-link" %>
+      <%= link_to "All users", "#", class: "navbar-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -22,11 +22,11 @@
             <%= image_tag "anonymous.png", class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <% else %>
             <%= cl_image_tag(current_user.photo, crop: :thumb, gravity: :face, class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown") %>
+            <i class="fas fa-caret-down" data-toggle="dropdown"></i>
           <% end %>
-          <i class="fas fa-caret-down" data-toggle="dropdown"></i>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <a><%= current_user.email %></a>
+              <a><%= current_user.username %></a>
             </li>
             <li>
               <%= link_to "#" do %>
@@ -34,12 +34,12 @@
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-cog"></i>  <%= link_to "Settings", edit_user_registration_path %>
+              <%=link_to "#" do %>
+                <i class="fa fa-cog"></i><%= link_to "Settings", edit_user_registration_path%>
               <% end %>
             </li>
             <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
+              <%=link_to destroy_user_session_path, method: :delete do %>
                 <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
               <% end %>
             </li>
