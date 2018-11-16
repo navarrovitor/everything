@@ -83,13 +83,16 @@
   padding: 0 20px;
 }
 
-/* Navbar link */
-.navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
+
+.navbar-link {
+  color: white;
+  margin-left: 20px;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+  font-weight: 400;
+  text-decoration: none;
 }
-.navbar-wagon-link:hover {
-  color: #da552f;
+
+.navbar-link:hover {
   text-decoration: none;
 }
 

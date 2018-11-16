@@ -11,14 +11,13 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "BATTLE!", battlepage_path, class: "navbar-link" %>
+      <%= link_to "Your friends", "#", class: "navbar-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= cl_image_tag(current_user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar", id: "navbar-wagon-menu", "data-toggle" => "dropdown") %>
+          <%= cl_image_tag(current_user.photo, crop: :thumb, gravity: :face, class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown") %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <a><%= current_user.email %></a>
