@@ -12,12 +12,17 @@
 
       <!-- Links when logged in -->
       <%= link_to "BATTLE!", battlepage_path, class: "navbar-link" %>
+      <%= link_to "Your movies", "#", class: "navbar-link" %>
       <%= link_to "Your friends", "#", class: "navbar-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
+          <% if current_user.photo.filename.nil? %>
+            <%= image_tag "anonymous.png", class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown"%>
+          <% else %>
           <%= cl_image_tag(current_user.photo, crop: :thumb, gravity: :face, class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown") %>
+          <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <a><%= current_user.email %></a>
