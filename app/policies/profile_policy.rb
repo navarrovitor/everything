@@ -1,9 +1,11 @@
 class ProfilePolicy < ApplicationPolicy
-  def show?
-    return true
+  class Scope < Scope
+    def resolve
+      scope.all
+    end
   end
 
-  def index?
+  def show?
     return true
   end
 

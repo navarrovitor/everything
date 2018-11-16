@@ -20,6 +20,12 @@ class PointsController < ApplicationController
     battle = Battle.new
     authorize battle
 
+    movies_not_seen = params[:movies_not_seen_list].split(" ")
+    movies_not_seen.each do |movie|
+      user.not_seen << movie
+    end
+    user.save
+
     if params[:vote_result].to_i == 1
       moviewinner = params[:movie1_id]
       movieloser = params[:movie2_id]
@@ -58,9 +64,8 @@ class PointsController < ApplicationController
       loser_point.save
     end
 
-    
-      winner_point.points += loser_point.points + 1
-      winner_point.save
+    winner_point.points += loser_point.points + 1
+    winner_point.save
 
     redirect_to battlepage_path
   end

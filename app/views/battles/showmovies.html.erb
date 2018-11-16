@@ -1,12 +1,24 @@
 <div class="wrapper-showall">
-  <div class="container-showall">
-    <table id="tablemovies">
-      <% @points.each do |point| %>
-        <tr class="each-movie">
-          <td class="table-movie-name"> <%= point.movie.title %> </td>
-          <td class="table-movie-points"> <%= point.points  %> </td>
-        </tr>
-      <% end %>
-    </table>
-  </div>
+  <% if @points.empty? %>
+    <div class="container-nothing">
+      <h2>Você ainda não avaliou nenhum filme. :/</h2>
+      <br>
+      <br>
+      <p class="text-center"> <%= link_to "AVALIE AGORA ", battlepage_path, class: "btn-purple"  %></p>
+    </div>
+  <% else %>
+    <h1 class="movie-list-title">Your movie list</h1>
+    <div class="container-showall">
+      <table id="tablemovies">
+        <% @points.each do |point| %>
+          <tr class="each-movie">
+            <td class="table-movie-name"> <%= point.movie.title %> </td>
+            <td class="table-movie-points"> <%= point.points  %> <span class="pts-deco">pts</span> </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  <% end %>
+  <br>
 </div>
+

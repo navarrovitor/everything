@@ -11,17 +11,22 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Battle", battlepage_path, class: "navbar-link" %>
+      <%= link_to "Your movies", playershow_path, class: "navbar-link" %>
+      <%= link_to "All users", profiles_path, class: "navbar-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= cl_image_tag(current_user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar", id: "navbar-wagon-menu", "data-toggle" => "dropdown") %>
+          <% if current_user.photo.filename.nil? %>
+            <%= image_tag "anonymous.png", class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <% else %>
+            <%= cl_image_tag(current_user.photo, crop: :thumb, gravity: :face, class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown") %>
+            <i class="fas fa-caret-down" data-toggle="dropdown"></i>
+          <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <a><%= current_user.email %></a>
+              <a><%= current_user.username %></a>
             </li>
             <li>
               <%= link_to "#" do %>
@@ -29,12 +34,12 @@
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-cog"></i>  <%= link_to "Settings", edit_user_registration_path %>
+              <%= link_to edit_user_registration_path do %>
+                <i class="fa fa-cog"></i> <%= t(".settings", default: "Settings") %>
               <% end %>
             </li>
             <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
+              <%=link_to destroy_user_session_path, method: :delete do %>
                 <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
               <% end %>
             </li>
@@ -48,7 +53,7 @@
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
+<!--   <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
@@ -57,6 +62,6 @@
         <li><a href="#">Other one</a></li>
       </ul>
     </div>
-  </div>
+  </div> -->
 </div>
 
