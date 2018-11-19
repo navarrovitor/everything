@@ -25,7 +25,13 @@
   opacity: 0.4;
 }
 
-.footer-copyright a {
+.footer-copyright {
   color: rgba(162,0,255,0.8);
   text-decoration: none;
 }
+ #footer-right-text {
+  color: white;
+  &:hover {
+    opacity: 0.4;
+  }
+ }
