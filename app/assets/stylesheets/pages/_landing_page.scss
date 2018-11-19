@@ -10,6 +10,30 @@
   // font-family: 'Lobster Two', cursive;
   letter-spacing: 2px;
 }
-.lp-container {
-  padding:0px;
+.div-da-massa {
+  background-image: linear-gradient(rgba(2,2,2,0.8), rgba(27,27,27,0.8) 30%);
+  background-size: cover;
+}
+#header-lp {
+  text-align: center;
+}
+#arrow {
+  text-align: center;
+  background-image: linear-gradient(transparent, rgba(2,2,2,0.8) 50%);
+}
+.arrow  {
+  position: relative;
+  font-size: 31px;
+  animation: bouncearrow 1s infinite;
+}
+@-webkit-keyframes bouncearrow{
+    0%{top: 0px;}
+    50%{top: 20px;}
+    100%{top: 0px;}
+}
+
+@keyframes bouncearrow{
+    0%{top: 0px;}
+    50%{top: 20px;}
+    100%{top: 0px;}
 }

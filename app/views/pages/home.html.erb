@@ -1,35 +1,60 @@
 <header class="masthead">
   <div class="container d-flex h-100 align-items-center">
     <div class="text-center margins">
-      <h2 class="margins text-center lp-title">Get great recommendations, easily</h2>
-      <p class="margins text-center lp-subtitle">Getting bored too often?</p>
+      <h2 class="margins text-center lp-title index-da-massa">Get great recommendations, easily</h2>
+      <p class="margins text-center lp-subtitle index-da-massa">Getting bored too often?</p>
       <%= link_to "Create your account", new_user_registration_path, class:"button btn-purple index-da-massa hvr-grow"%>
     </div>
   </div>
 </header>
 
-<!--
-<div class="container index-da-massa lp-container">
-  <h1 style="text-align: center">Qual é o melhor filme?</h1>
-  <br>
-  <div class="row">
-    <div class="col-xs-6">
-      esse filme
-    </div>
+<canvas id="nokey">
+</canvas>
 
-    <div class="col-xs-6">
-      esse filme
-      <ul>
-        <li>a</li>
-        <li>b</li>
-        <li>b</li>
-        <li>b</li>
-        <li>b</li>
-      </ul>
+<br>
+<div class="index-da-massa" id="arrow">
+  <br>
+  <i class="fas fa-chevron-down arrow"></i>
+  <br><br><br>
+</div>
+
+<br>
+
+<div class="div-da-massa index-da-massa">
+  <h1 >Qual é o melhor filme?</h1>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div data-aos="fade-right">
+        <div class="col-xs-6">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
+              <a href="#" class="btn-red card-left">NÃO VI</a>
+            <div class="card-description">
+              <div class="name">
+                <h2>JURASSIC PARK</h2>
+                <p>Steven Spielberg (1993)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+          <div class="col-xs-6">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,643,1000_AL_.jpg');">
+              <a href="#" class="btn-red card-right">NÃO VI</p></a>
+              <div class="card-description">
+                <div class="name">
+                  <h2>BACK TO THE FUTURE</h2>
+                  <p>Robert Zemeckis (1985)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
- -->
-<canvas id="nokey">
-</canvas>
+<br><br><br>
