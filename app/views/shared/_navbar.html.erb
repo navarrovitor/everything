@@ -1,6 +1,6 @@
-<div class="navbar-wagon blurry index-da-massa">
+<div class="navbar-wagon blurry">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+  <%= link_to root_path, class: "navbar-wagon-brand index-da-massa" do %>
     <%= image_tag "logo.png", height: 50 %>
   <% end %>
 
@@ -11,12 +11,12 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Battle", battlepage_path, class: "navbar-link" %>
-      <%= link_to "Your movies", playershow_path, class: "navbar-link" %>
-      <%= link_to "All users", profiles_path, class: "navbar-link" %>
+      <%= link_to "Battle", battlepage_path, class: "navbar-link index-da-massa" %>
+      <%= link_to "Your movies", playershow_path, class: "navbar-link index-da-massa" %>
+      <%= link_to "All users", profiles_path, class: "navbar-link index-da-massa" %>
 
       <!-- Avatar with dropdown menu -->
-      <div class="navbar-wagon-item">
+      <div class="navbar-wagon-item index-da-massa">
         <div class="dropdown">
           <% if current_user.photo.filename.nil? %>
             <%= image_tag "anonymous.png", class: "avatar-square", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
@@ -48,7 +48,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link index-da-massa" %>
     <% end %>
   </div>
 
