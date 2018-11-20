@@ -33,7 +33,7 @@ class ProfilesController < ApplicationController
       end
 
       max_relevance = @relevances.max
-      @relevances.map! { |val| ((val.to_f / max_relevance).round(3)) * 100 }
+      @relevances.map! { |val| ((val.to_f / max_relevance)*100).round(1)  }
 
     end
   end
