@@ -14,8 +14,8 @@ function sortTable() {
     rows = table.rows;
     for (i = 0; i < (rows.length - 1); i++) {
       shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[2];
-      y = rows[i + 1].getElementsByTagName("TD")[2];
+      x = rows[i].getElementsByTagName("TD")[3];
+      y = rows[i + 1].getElementsByTagName("TD")[3];
       if (parseFloat(x.innerHTML) < parseFloat(y.innerHTML)) {
         shouldSwitch = true;
         break;
@@ -32,7 +32,7 @@ sortTable()
 
 var percentColors = [
     { pct: 0.0, color: { r: 0xff, g: 0x00, b: 0 } },
-    { pct: 0.6, color: { r: 0xff, g: 0xff, b: 0 } },
+    { pct: 0.8, color: { r: 0xff, g: 0xff, b: 0 } },
     { pct: 1.0, color: { r: 0x00, g: 0xff, b: 0 } } ];
 
 var getColorForPercentage = function(pct) {
@@ -72,5 +72,44 @@ Array.prototype.forEach.call(allPercentages, pct => {
   pct.style.color = getColorForPercentage(relevancePercentageCollection[0])
   relevancePercentageCollection.shift()
 });
+
+
+
+//Profile styling according to position
+profileList = document.getElementsByClassName("each-profile")
+profileTable = document.getElementById("profiletable")
+highlights = Math.floor(profileList.length * 0.6) - 3
+l(highlights)
+
+count = 0;
+
+Array.prototype.forEach.call(profileList, profile => {
+  if (count === 0) {
+    profile.classList.add("gold-profile")
+    profile.classList.add("big-profiles")
+    profile.getElementsByClassName("profile-position")[0].innerHTML = `<span class='profile-position-number'>1</span><span class='profile-position-placer'>st</span>`
+  } else if (count === 1) {
+    profile.classList.add("silver-profile")
+    profile.classList.add("big-profiles")
+    profile.getElementsByClassName("profile-position")[0].innerHTML = `<span class='profile-position-number'>2</span><span class='profile-position-placer'>nd</span>`
+  } else if (count === 2) {
+    profile.classList.add("bronze-profile")
+    profile.classList.add("big-profiles")
+    profile.getElementsByClassName("profile-position")[0].innerHTML = `<span class='profile-position-number'>3</span><span class='profile-position-placer'>rd</span>`
+  } else if (count > 2 && count < highlights + 3) {
+    profile.classList.add("highlight-profile")
+    profile.classList.add("mid-profiles")
+    profile.getElementsByClassName("profile-position")[0].innerHTML = `<span class='profile-position-number'>${count+1}</span><span class='profile-position-placer'>th</span>`
+  } else {
+    profile.classList.add("small-profiles")
+    profile.getElementsByClassName("profile-position")[0].innerHTML = `<span class='profile-position-number'>${count+1}</span><span class='profile-position-placer'>th</span>`
+  }
+  count += 1;
+});
+
+newRow = profileTable.insertRow(3);
+newRow.classList.add("big-space-row")
+newRow = profileTable.insertRow(highlights + 4);
+newRow.classList.add("small-space-row")
 
 });

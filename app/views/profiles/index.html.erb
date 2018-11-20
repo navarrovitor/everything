@@ -1,8 +1,9 @@
-<div class="wrapper-profiles">
-  <div class="container-profiles">
+<div class="wrapper-profiles text-center">
+  <div class="container-profiles text-center">
     <table id="profiletable">
       <% @other_users.each do |otheruser| %>
         <tr class="each-profile">
+          <td class="profile-position">x</td>
           <td class="profile-table-photo">
             <% if otheruser.photo.filename.nil? %>
               <%= image_tag "anonymous.png", width: 150, height: 150, class: "avatar" %>
@@ -19,9 +20,9 @@
           </td>
           <td class="profile-table-relevance"><%= @relevances[@other_users.index(otheruser)]%></td>
           <td class="profile-table-follow"><a href="#" class="btn-red">Follow</a></p></td>
+          <td class="profile-table-space"></td>
         </tr>
       <% end %>
     </table>
   </div>
 </div>
-
