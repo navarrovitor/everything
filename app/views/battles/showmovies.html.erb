@@ -8,24 +8,17 @@
 <% else %>
   <div class="container">
     <h1>Seus filmes preferidos</h1>
-    <br>
-    <br>
     <% i = 1 %>
-    <div class="row">
-      <% @points.each do |point| %>
-        <div class="col-6 col-lg-3">
-          <div class="name">
-            <h3><%= i %>. <%= point.movie.title %></h3>
-            <h5>(<%= point.movie.year %>)</h5>
-            <!-- insert <div class="card"> -->
-          </div>
+    <% @points.each do |point| %>
+      <div class="movie-list-item">
+        <div class="name">
+          <h3><%= i %>. <%= point.movie.title %></h3>
+          <h5>(<%= point.movie.year %>)</h5>
         </div>
-        <div class="col-6 col-lg-3">
-          <div class="card recommendation">
-          </div>
+        <div class="card recommendation">
         </div>
         <% i += 1 %>  
+      </div>
       <% end %>
-    </div>
   </div>
 <% end %>
