@@ -7,14 +7,15 @@
             <% if otheruser.photo.filename.nil? %>
               <%= image_tag "anonymous.png", width: 150, height: 150, class: "avatar" %>
             <% else %>
-              <%= cl_image_tag(otheruser.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar") %> 
+              <%= cl_image_tag(otheruser.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar") %>
             <% end %>
           </td>
           <td class="profile-table-email"> <%= otheruser.email %> </td>
-          <td class="profile-table-relevance"> <%= @relevances[@other_users.index(otheruser)]  %> </td>
+          <td class="profile-table-relevance"> <span class="relevance-pct"><%= @relevances[@other_users.index(otheruser)]  %></span><span class="relevance-pct-symbol">%</span></td>
           <td class="profile-table-follow"><a href="#" class="btn-red">Follow</a></p></td>
         </tr>
       <% end %>
     </table>
   </div>
 </div>
+
