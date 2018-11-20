@@ -10,7 +10,13 @@
               <%= cl_image_tag(otheruser.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar") %>
             <% end %>
           </td>
-          <td class="profile-table-email"> <%= otheruser.email %> </td>
+          <td class="profile-table-email">
+            <% if !otheruser.username.nil? %>
+              <%= otheruser.username %>
+            <% else %>
+              <%= otheruser.email %>
+            <% end %>
+          </td>
           <td class="profile-table-relevance"><%= @relevances[@other_users.index(otheruser)]%></td>
           <td class="profile-table-follow"><a href="#" class="btn-red">Follow</a></p></td>
         </tr>

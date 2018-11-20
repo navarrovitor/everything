@@ -18,6 +18,21 @@
   height: 50px;
 }
 
+.profile-table-photo img {
+  border: 1px solid rgba(100,100,100,1);
+}
+
+td {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+td:first-child {
+  padding-left: 5px;
+  padding-right:0;
+}
+
 .profile-table-email {
   font-size: 20px;
   color: white;
