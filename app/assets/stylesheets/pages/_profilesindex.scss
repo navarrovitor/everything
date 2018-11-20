@@ -23,8 +23,8 @@
 }
 
 td {
-  padding-top: 5px;
-  padding-bottom: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   padding-right: 5px;
 }
 
@@ -36,14 +36,15 @@ td:first-child {
 .profile-table-email {
   font-size: 20px;
   color: white;
-  padding-right: 200px;
+  // padding-right: 100px;
   padding-left: 40px;
+  width: 400px;
 }
 
 .profile-table-relevance {
   font-size: 30px;
   font-weight: bold;
-  padding-right: 150px;
+  width: 300px;
   text-shadow: 1px 1px black;
 }
 
@@ -55,5 +56,5 @@ td:first-child {
 
 
 .profile-table-follow {
-
+  width: 100px;
 }
