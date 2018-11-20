@@ -27,6 +27,21 @@
   text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
+.ranking-card {
+  position: relative;
+  font-size: 10px;
+  background-color: rgba(162,0,255,0.8);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  p {
+  font-weight: 400;
+  }
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+}
+
 
 @media screen and (max-width: 950px) {
   h1 {
@@ -37,6 +52,9 @@
   }
   .card-description p {
   font-size: 0.8em;
+  }
+  h3 {
+  font-size: 1.0em;
   }
 }
 
@@ -49,6 +67,9 @@
   }
   .card-description p {
   font-size: 1em;
+  }
+  h3 {
+    font-size: 1.5em;
   }
 }
 
@@ -92,12 +113,6 @@
 }
 
 .recommendation {
+  width: auto;
   height: 175px;
-  .card-right, .card-left {
-  right: 10px;
-  top: 10px;
-  }
-  .card-description {
-    height: 100%;
-  }
 }
