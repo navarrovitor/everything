@@ -52,7 +52,7 @@
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
   .tabs .tab-2 {
-    width: 16.5%; }
+    width: 33%; }
     .tabs .tab-2 [type="radio"] + div {
       width: 200%;
       margin-left: 200%; }
@@ -62,3 +62,8 @@
       margin-left: 100%; }
     .tabs .tab-2:last-child [type="radio"]:checked + div {
       margin-left: -100%; }
+
+
+  .everything-tab{
+    color: $purple;
+  }
