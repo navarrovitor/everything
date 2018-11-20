@@ -26,12 +26,22 @@
 }
 
 .profile-table-relevance {
-  font-size: 30px;
-  color: white;
-  font-weight: bold;
   padding-right: 100px;
+  text-shadow: 1px 1px black;
+}
+
+.relevance-pct {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.relevance-pct-symbol {
+  font-size: 25px;
+  font-weight: lighter;
+  padding-left: 5px;
 }
 
 
 .profile-table-follow {
+
 }
