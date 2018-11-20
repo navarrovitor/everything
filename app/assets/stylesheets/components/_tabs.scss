@@ -13,10 +13,10 @@
     color: #efedef;
     cursor: pointer;
     display: block;
-    font-size: 1.1em;
+    font-size: 20px;
     font-weight: 300;
     line-height: 1em;
-    padding: 2rem 0;
+    padding: 5px;
     text-align: center; }
   .tabs [class^="tab"] [type="radio"],
   .tabs [class*=" tab"] [type="radio"] {
@@ -46,13 +46,13 @@
       display: block;
       opacity: 0;
       padding: 2rem 0;
-      width: 90%;
+      width: 100%;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
   .tabs .tab-2 {
-    width: 15%; }
+    width: 50%; }
     .tabs .tab-2 [type="radio"] + div {
       width: 200%;
       margin-left: 200%; }
