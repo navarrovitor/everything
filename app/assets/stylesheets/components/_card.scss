@@ -113,6 +113,27 @@
 }
 
 .recommendation {
-  width: auto;
-  height: 175px;
+  height: 15vw;
+  width: 10vw;
+}
+
+.movie-list-item {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  margin: 3vh;
+  width: 20vw;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h3 {
+    font-size: 5vh;
+  };
+  h5 {
+    font-size: 2vh;
+  };
 }
