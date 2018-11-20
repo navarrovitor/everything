@@ -34,10 +34,10 @@
     .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
     .tabs [class*=" tab"] [type="radio"]:hover,
     .tabs [class*=" tab"] [type="radio"]:focus {
-      border-bottom: 1px solid #fd264f; }
+      border-bottom: 1px solid $purple; }
     .tabs [class^="tab"] [type="radio"]:checked,
     .tabs [class*=" tab"] [type="radio"]:checked {
-      border-bottom: 2px solid #fd264f; }
+      border-bottom: 2px solid $purple; }
     .tabs [class^="tab"] [type="radio"]:checked + div,
     .tabs [class*=" tab"] [type="radio"]:checked + div {
       opacity: 1; }
@@ -52,7 +52,7 @@
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
   .tabs .tab-2 {
-    width: 50%; }
+    width: 16.5%; }
     .tabs .tab-2 [type="radio"] + div {
       width: 200%;
       margin-left: 200%; }
