@@ -10,6 +10,18 @@
   margin-top: 15px;
 }
 
+.card-lp {
+  height: 60vh;
+  background-size: cover !important;
+  background-position: center;
+  color: #white;
+  position: relative;
+  .btn-red, .btn-green, .card-description {
+    // visibility: hidden;
+  }
+  margin-top: 15px;
+}
+
 .card-description {
   position: absolute;
   bottom: 0px;

@@ -3,7 +3,7 @@
     <div class="text-center margins">
       <h2 class="margins text-center lp-title index-da-massa">Get great recommendations, easily</h2>
       <p class="margins text-center lp-subtitle index-da-massa">Getting bored too often?</p>
-      <%= link_to "Create your account", new_user_registration_path, class:"button btn-purple index-da-massa hvr-grow"%>
+      <a href="#demonstration" class="button btn-purple index-da-massa hvr-grow">See for yourself!</a>
     </div>
   </div>
 </header>
@@ -12,25 +12,28 @@
 </canvas>
 
 <br>
-<div class="index-da-massa" id="arrow">
+
+<div class="index-da-massa arrowc1">
   <br>
-  <i class="fas fa-chevron-down arrow"></i>
+  <i class="fas fa-chevron-down arrow1"></i>
   <br><br><br>
 </div>
 
 <br>
 
-<div class="div-da-massa index-da-massa">
-  <h1 >Qual é o melhor filme?</h1>
-
+<div class="div-da-massa1 index-da-massa" id="demonstration">
   <br>
+  <br>
+
+  <h2 class="margins text-center lp-title">Make your movies battle between themselves!</h2>
+  <p class="margins text-center lp-subtitle">Here in everything™, you can tell us which movies you like more in an fun and easy way</p>
 
   <div class="container">
     <div class="row">
-      <div data-aos="fade-right">
+      <div data-aos="fade-right" data-aos-duration="3000">
         <div class="col-xs-6">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
-              <a href="#" class="btn-red card-left">NÃO VI</a>
+          <div class="card-lp" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
+              <a href="#demonstration" class="btn-red card-left">NÃO VI</a>
             <div class="card-description">
               <div class="name">
                 <h2>JURASSIC PARK</h2>
@@ -40,10 +43,10 @@
           </div>
         </div>
       </div>
-      <div data-aos="fade-left">
+      <div data-aos="fade-left" data-aos-duration="3000">
           <div class="col-xs-6">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,643,1000_AL_.jpg');">
-              <a href="#" class="btn-red card-right">NÃO VI</p></a>
+            <div class="card-lp" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,643,1000_AL_.jpg');">
+              <a href="#demonstration" class="btn-red card-right">NÃO VI</p></a>
               <div class="card-description">
                 <div class="name">
                   <h2>BACK TO THE FUTURE</h2>
@@ -57,4 +60,49 @@
     </div>
   </div>
 </div>
+
+<div class="index-da-massa arrowc2">
+  <br>
+  <br>
+  <i class="fas fa-chevron-down arrow2"></i>
+  <br><br><br>
+</div>
+
+<br>
+
+<div class="div-da-massa2">
+
+  <br>
+  <br>
+
+  <div class="ranking margins">
+    <h2 class="margins text-center lp-title">Rank your movies!</h2>
+    <ul id="rank-list">
+      <li>
+        <img src="https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,643,1000_AL_.jpg" alt="" class="avatar-square avatar-square-large">
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+
+      <li>
+        <img src="http://lorempixum.com/100/100/nature/2" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+
+      <li>
+        <img src="http://lorempixum.com/100/100/nature/3" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+
+      <li>
+        <img src="http://lorempixum.com/100/100/nature/4" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
