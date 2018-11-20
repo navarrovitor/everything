@@ -19,6 +19,10 @@
 
 .each-profile {
   background-color: rgba(200,200,200,0.5);
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .big-profiles {
