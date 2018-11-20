@@ -11,7 +11,7 @@
             <% end %>
           </td>
           <td class="profile-table-email"> <%= otheruser.email %> </td>
-          <td class="profile-table-relevance"> <span class="relevance-pct"><%= @relevances[@other_users.index(otheruser)]  %></span><span class="relevance-pct-symbol">%</span></td>
+          <td class="profile-table-relevance"><%= @relevances[@other_users.index(otheruser)]%></td>
           <td class="profile-table-follow"><a href="#" class="btn-red">Follow</a></p></td>
         </tr>
       <% end %>
