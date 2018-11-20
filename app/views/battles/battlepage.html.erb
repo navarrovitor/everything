@@ -17,55 +17,97 @@
 </div>
 
 <div class="container">
+  <div class="tabs place">
+    <div class="tab-2">
+      <label for="tab2-1">Movies</label>
+      <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+      <div>
+        <div class="container">
 
-  <h1 style="text-align: center">Qual é o melhor filme?</h1>
-  <br>
-  <div class="row">
-    <div class="col-xs-6">
+    <h1 style="text-align: center">Qual é o melhor filme?</h1>
+    <br>
+    <div class="row">
+      <div class="col-xs-6">
 
-      <form action="/point" method="post">
-        <input name="_method" type="hidden" value="patch"/>
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <%= hidden_field_tag :user_id, current_user.id %>
-        <%= hidden_field_tag :vote_result, 1 %>
-        <input type="text" name="movie1_id" id="movie1-select1" style="display: none;">
-        <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
-        <input type="text" name="movies_not_seen_list" id="movies-not-seen-list1" style="display: none;">
-        <div class="card poster1" id="vote1-btn" onclick="javascript:event.target.parentNode.submit();">
-          <a href="#" class="btn-red card-left switch-movie" id="switchmovie1">NÃO VI</a>
-          <div class="card-description">
-              <div class="name">
-                <h2 class="movie-title"><%= @movie1[0].title %></h2>
-                <p>(<%= @movie1[0].year %>)</p>
-              </div>
+        <form action="/point" method="post">
+          <input name="_method" type="hidden" value="patch"/>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <%= hidden_field_tag :user_id, current_user.id %>
+          <%= hidden_field_tag :vote_result, 1 %>
+          <input type="text" name="movie1_id" id="movie1-select1" style="display: none;">
+          <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
+          <input type="text" name="movies_not_seen_list" id="movies-not-seen-list1" style="display: none;">
+          <div class="card poster1" id="vote1-btn" onclick="javascript:event.target.parentNode.submit();">
+            <a href="#" class="btn-red card-left switch-movie" id="switchmovie1">NÃO VI</a>
+            <div class="card-description">
+                <div class="name">
+                  <h2 class="movie-title"><%= @movie1[0].title %></h2>
+                  <p>(<%= @movie1[0].year %>)</p>
+                </div>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
 
-    </div>
+      </div>
 
-    <div class="col-xs-6">
+      <div class="col-xs-6">
 
-      <form action="/point" method="post">
-        <input name="_method" type="hidden" value="patch"/>
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <%= hidden_field_tag :user_id, current_user.id %>
-        <%= hidden_field_tag :vote_result, 2 %>
-        <input type="text" name="movie1_id" id="movie1-select2" style="display: none;">
-        <input type="text" name="movie2_id" id="movie2-select2" style="display: none;">
-        <input type="text" name="movies_not_seen_list" id="movies-not-seen-list2" style="display: none;">
-        <div class="card poster2" id="vote2-btn" onclick="javascript:event.target .parentNode.submit();">
+        <form action="/point" method="post">
+          <input name="_method" type="hidden" value="patch"/>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <%= hidden_field_tag :user_id, current_user.id %>
+          <%= hidden_field_tag :vote_result, 2 %>
+          <input type="text" name="movie1_id" id="movie1-select2" style="display: none;">
+          <input type="text" name="movie2_id" id="movie2-select2" style="display: none;">
+          <input type="text" name="movies_not_seen_list" id="movies-not-seen-list2" style="display: none;">
+          <div class="card poster2" id="vote2-btn" onclick="javascript:event.target .parentNode.submit();">
 
-          <a href="#" class="btn-red card-right switch-movie" id="switchmovie2">NÃO VI</a>
-          <div class="card-description">
-              <div class="name">
-                <h2 class="movie-title"><%= @movie2[0].title %></h2>
-                <p>(<%= @movie2[0].year %>)</p>
-              </div>
+            <a href="#" class="btn-red card-right switch-movie" id="switchmovie2">NÃO VI</a>
+            <div class="card-description">
+                <div class="name">
+                  <h2 class="movie-title"><%= @movie2[0].title %></h2>
+                  <p>(<%= @movie2[0].year %>)</p>
+                </div>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
 
-    </div>
+      </div>
+  </div>
+  </div>
 </div>
 </div>
+
+<div class="tab-2">
+    <label for="tab2-2">Books (Soon)</label>
+    <input id="tab2-2" name="tabs-two" type="radio">
+    <div>
+      <h4>Future New Futures</h4>
+      <p>lista com as novas features.</p>
+      <p>aqui eu vou fingir como serão as demais features</p>
+    </div>
+  </div>
+
+  <div class="tab-2">
+    <label for="tab2-6" class="everything-tab">Everything (Soon)</label>
+    <input id="tab2-6" name="tabs-two" type="radio">
+    <div>
+      <h4>Future New Futures</h4>
+      <p>lista com as novas features.</p>
+      <p>aqui eu vou fingir como serão as demais features</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
