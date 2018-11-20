@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
+    "aos": "^2.3.4",
     "bootstrap": "3",
     "jquery": "^3.3.1"
   },
