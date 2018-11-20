@@ -78,7 +78,7 @@ Array.prototype.forEach.call(allPercentages, pct => {
 //Profile styling according to position
 profileList = document.getElementsByClassName("each-profile")
 profileTable = document.getElementById("profiletable")
-highlights = Math.floor(profileList.length * 0.6) - 3
+highlights = Math.floor(profileList.length * 0.35) - 3
 l(highlights)
 
 count = 0;
