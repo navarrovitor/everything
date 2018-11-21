@@ -34,8 +34,12 @@ class UsersController < ApplicationController
   end
 
   def show
+    if params[:id]
+      @user = User.find(params[:id])
+    else
+      @user = current_user
+    end
     @points = Point.where("user_id = ?", params[:id])
-    @user = User.find(params[:id])
     authorize @user
     @number_of_ratings = ratings_count(@user)
     @user_level = user_level(@number_of_ratings)
