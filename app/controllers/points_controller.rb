@@ -104,6 +104,20 @@ class PointsController < ApplicationController
     redirect_to battlepage_path
   end
 
+  def seen_already
+    battle = Battle.new
+    authorize battle
+
+    point = Point.new
+    point.movie = Movie.find(params[:movie_id])
+    point.user = User.find(params[:user_id])
+    point.points = 0
+    point.save
+
+    redirect_to recommend_path
+  end
+
+
   def destroy
   end
 end

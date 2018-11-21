@@ -101,5 +101,4 @@ class ApplicationController < ActionController::Base
     end
     return sum_product / sum_weights
   end
-
 end

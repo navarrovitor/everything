@@ -6,9 +6,9 @@
           <td class="profile-position">x</td>
           <td class="profile-table-photo">
             <% if otheruser.photo.filename.nil? %>
-              <%= image_tag "anonymous.png", width: 150, height: 150, class: "avatar" %>
+              <%= link_to (image_tag "anonymous.png", width: 150, height: 150), user_path(otheruser), class: "avatar" %>
             <% else %>
-              <%= cl_image_tag(otheruser.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar") %>
+              <%=link_to (cl_image_tag(otheruser.photo, width: 150, height: 150, crop: :thumb, gravity: :face)), user_path(otheruser), class: "avatar"  %>
             <% end %>
           </td>
           <td class="profile-table-email">
@@ -19,7 +19,9 @@
             <% end %>
           </td>
           <td class="profile-table-relevance"><%= @relevances[@other_users.index(otheruser)]%></td>
-          <td class="profile-table-follow"><a href="#" class="btn-red">Follow</a></p></td>
+          <td class="profile-table-follow">
+          <% link_to "See Movies Rank", user_path(otheruser), class: "btn btn-primary"  %>
+          </td>
           <td class="profile-table-space"></td>
         </tr>
       <% end %>

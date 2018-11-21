@@ -1,15 +1,17 @@
 <header class="masthead" id="lp-begin">
   <div class="container d-flex h-100 align-items-center">
     <div class="text-center margins">
-      <h2 class="margins text-center lp-title index-da-massa">Get great recommendations, easily</h2>
-      <p class="margins text-center lp-subtitle index-da-massa">Getting bored too often?</p>
-      <a href="#lp-battle" class="button btn-purple index-da-massa hvr-grow">See for yourself!</a>
+      <h2 class="margins text-center lp-title index-da-massa">Get great recommendations, easily.</h2>
+      <%= link_to t(".sign_up", default: "See for yourself!"), new_user_registration_path, class: "button btn-purple hvr-grow index-da-massa" %>
     </div>
   </div>
 </header>
 
-<canvas id="nokey">
-</canvas>
+<!-- <div id="main" role="main"> -->
+    <canvas id="nokey" >
+    </canvas>
+<!-- </div> -->
+
 
 <br>
 
