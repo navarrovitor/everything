@@ -1,37 +1,142 @@
 .wrapper-profiles {
-  height: 200vh;
+  min-height: calc(100vh-70px);
   background-color: black;
-  padding: 50px 400px;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .container-profiles {
-  background-color: rgba(200,200,200,0.8);
-  border: 2px solid white;
   padding: 20px 20px;
+  width: 60%;
 }
 
 #profiletable {
-
+  border-collapse: separate;
+  border-spacing: 0 5px;
 }
 
 .each-profile {
-  height: 50px;
+  background-color: rgba(200,200,200,0.5);
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.big-profiles {
+  height: 25vh;
+
+  .profile-table-photo img  {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.mid-profiles {
+  height: 10vh;
+
+  .profile-table-photo img  {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.small-profiles {
+  height: 5vh;
+
+  .profile-table-photo img  {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.gold-profile {
+  background-color: rgba(255,215,0,0.6);
+}
+
+.silver-profile {
+  background-color: rgba(150,150,150,0.6);
+}
+
+.bronze-profile {
+  background-color: rgba(130,100,20,0.6);
+}
+
+.highlight-profile {
+  background-color: rgba(150,220,240,0.6);
+}
+
+.profile-table-photo img {
+  border: 1px solid rgba(100,100,100,1);
+}
+
+td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+}
+
+td:first-child {
+  padding-left: 5px;
+  padding-right: 0;
 }
 
 .profile-table-email {
   font-size: 20px;
   color: white;
-  padding-right: 300px;
+  // padding-right: 100px;
   padding-left: 40px;
+  width: 40%;
 }
 
 .profile-table-relevance {
   font-size: 30px;
-  color: white;
   font-weight: bold;
-  padding-right: 100px;
+  width: 30%;
+  text-shadow: 1px 1px black;
+}
+
+.relevance-pct-symbol {
+  font-size: 25px;
+  font-weight: lighter;
+  padding-left: 5px;
 }
 
 
 .profile-table-follow {
+  width: 10%;
+}
+
+.profile-position {
+  width: 15%;
+  font-size: 50px;
+}
+
+.profile-table-space {
+  width: 5%;
+  font-size: 50px;
+}
+
+
+.profile-position-number {
+  font-size: 60px;
+}
+
+
+.profile-position-placer {
+  font-size: 25px;
+  position: relative;
+  bottom: 20px;
+}
+
+.big-space-row {
+  background-color: black;
+  height: 15px;
+}
+
+.small-space-row {
+  background-color: black;
+  height: 8px;
 }
