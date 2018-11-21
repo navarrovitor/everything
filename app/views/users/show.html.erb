@@ -1,20 +1,23 @@
 <% if @points.empty? %>
-    <div class="container-nothing">
-      <%  if @user.username.nil? %>
-        <h2><%= @user.email %> ainda não avaliou nenhum filme. :/</h2>
-      <% else %>
-          <h2><%= @user.username %> ainda não avaliou nenhum filme. :/</h2>
-      <% end %>
-      <br>
+<!-- user hasn't rated movies -->
+  <div class="container-nothing">
+    <% if @user == @current_user %>
+      <!-- user is seeing his own page -->
+      <h2><%= @user_level[2] %></h2>
+      <h3><%= @user_level[3] %></h3>
       <br>
       <p class="text-center"> <%= link_to "AVALIE AGORA ", battlepage_path, class: "btn-purple"  %></p>
+    <% else %>
+      <!-- user is seeing someone else's page -->
+      <h2><%= @user.username.nil? ? "USER #{@user.id}" : @user.username.upcase %> hasn't rated any movies yet.</h2>
+    <% end %>
     </div>
 <% else %>
   <div class="container">
-    <%  if @user.username.nil? %>
-      <h1>Os filmes preferido de <%= @user.email %></h1>
+    <% if @user == @current_user %>
+      <h1>Os seus filmes preferidos</h1>
     <% else %>
-      <h1>Os filmes preferido de <%= @user.username %></h1>
+      <h1>Os filmes preferidos de <%= @user.username.nil? ? "USER #{@user.id}" : @user.username.upcase %></h1>
     <% end %>
     <% i = 1 %>
     <% @points.each do |point| %>

@@ -12,7 +12,7 @@
 
       <!-- Links when logged in -->
       <%= link_to "Battle", battlepage_path, class: "navbar-link index-da-massa" %>
-      <%= link_to "Your movies", playershow_path, class: "navbar-link index-da-massa" %>
+      <%= link_to "Your movies", user_path(current_user), class: "navbar-link index-da-massa" %>
       <%= link_to "All users", points_path, class: "navbar-link index-da-massa" %>
       <%= link_to "Recommendations", recommend_path, class: "navbar-link index-da-massa" %>
 
