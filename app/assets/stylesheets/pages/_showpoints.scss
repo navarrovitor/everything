@@ -66,3 +66,17 @@
   padding: 20px;
   background-color: rgb(162,0,255);
 }
+
+.container-white {
+  color: black;
+  margin: 0px;
+  padding: 20px;
+  background-color: rgb(240,240,240);
+  h3 {
+    margin: 0;
+    text-shadow: none;
+  }
+  h4{
+    text-shadow: none;
+  }
+}
