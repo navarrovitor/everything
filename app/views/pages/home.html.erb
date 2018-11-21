@@ -1,9 +1,9 @@
-<header class="masthead">
+<header class="masthead" id="lp-begin">
   <div class="container d-flex h-100 align-items-center">
     <div class="text-center margins">
       <h2 class="margins text-center lp-title index-da-massa">Get great recommendations, easily</h2>
       <p class="margins text-center lp-subtitle index-da-massa">Getting bored too often?</p>
-      <%= link_to "Create your account", new_user_registration_path, class:"button btn-purple index-da-massa hvr-grow"%>
+      <a href="#lp-battle" class="button btn-purple index-da-massa hvr-grow">See for yourself!</a>
     </div>
   </div>
 </header>
@@ -12,25 +12,28 @@
 </canvas>
 
 <br>
-<div class="index-da-massa" id="arrow">
+
+<div class="index-da-massa arrowc1">
   <br>
-  <i class="fas fa-chevron-down arrow"></i>
+  <i class="fas fa-chevron-down arrow1"></i>
   <br><br><br>
 </div>
 
 <br>
 
-<div class="div-da-massa index-da-massa">
-  <h1 >Qual é o melhor filme?</h1>
-
+<div class="div-da-massa1 index-da-massa" id="lp-battle">
   <br>
+  <br>
+
+  <h2 class="margins text-center lp-title">Make your movies battle between themselves!</h2>
+  <p class="margins text-center lp-subtitle">Here in everything™, you can tell us which movies you like more in an fun and easy way</p>
 
   <div class="container">
     <div class="row">
-      <div data-aos="fade-right">
+      <div data-aos="fade-right" data-aos-duration="3000">
         <div class="col-xs-6">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
-              <a href="#" class="btn-red card-left">NÃO VI</a>
+          <div class="card-lp" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg');">
+              <a href="#demonstration" class="btn-red card-left">NÃO VI</a>
             <div class="card-description">
               <div class="name">
                 <h2>JURASSIC PARK</h2>
@@ -40,10 +43,10 @@
           </div>
         </div>
       </div>
-      <div data-aos="fade-left">
+      <div data-aos="fade-left" data-aos-duration="3000">
           <div class="col-xs-6">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,643,1000_AL_.jpg');">
-              <a href="#" class="btn-red card-right">NÃO VI</p></a>
+            <div class="card-lp" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,643,1000_AL_.jpg');">
+              <a href="#demonstration" class="btn-red card-right">NÃO VI</p></a>
               <div class="card-description">
                 <div class="name">
                   <h2>BACK TO THE FUTURE</h2>
@@ -57,4 +60,124 @@
     </div>
   </div>
 </div>
+
+<div class="index-da-massa arrowc2">
+  <br>
+  <br>
+  <i class="fas fa-chevron-down arrow2"></i>
+  <br><br><br>
+</div>
+
+<br>
+
+<div class="div-da-massa2" id="lp-rank">
+
+  <br>
+  <br>
+
+  <div class="ranking margins">
+    <h2 class="margins text-center lp-title">Rank your movies!</h2>
+    <div class="container" data-aos="zoom-out">
+      <div class="movie-list-item">
+        <div class="name">
+          <h3>1. Pulp Fiction</h3>
+          <h5>1975</h5>
+        </div>
+        <div class="card ranking-pic" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg);">
+        </div>
+      </div>
+      <div class="movie-list-item">
+        <div class="name">
+          <h3>2. Jurassic Park</h3>
+          <h5>1993</h5>
+        </div>
+        <div class="card ranking-pic" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3jnNPFgbWmTrKkgb3l0B48SzqDJc7wTozWwtC-0L95NGMX9i3);">
+        </div>
+      </div>
+      <div class="movie-list-item">
+        <div class="name">
+          <h3>3. Star Wars V</h3>
+          <h5>1980</h5>
+        </div>
+        <div class="card ranking-pic" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(https://images-na.ssl-images-amazon.com/images/I/91%2BCydthCeL._SY445_.jpg);">
+        </div>
+      </div>
+      <div class="movie-list-item">
+        <div class="name">
+          <h3>4. Matrix</h3>
+          <h5>1999</h5>
+        </div>
+        <div class="card ranking-pic" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg);">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="index-da-massa arrowc3">
+  <br>
+  <i class="fas fa-chevron-down arrow3"></i>
+  <br><br><br>
+</div>
+
+<br>
+
+
+<div class="div-da-massa3">
+
+  <br>
+  <br>
+
+  <div class="container">
+    <h2 class="margins text-center lp-title">Get recommended!</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+        <div class="card rec-pic" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://m.media-amazon.com/images/I/41OVhmRvx7L._UY260_UX260_AL_.jpg);">
+      </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+      <div class="card rec-pic" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://cdnrockol-rockolcomsrl.netdna-ssl.com/6hGAcEgy2vHCzFwTxQb0asN7xMo=/702x526/smart/rockol-img/img/foto/upload/la-la-land.jpg);">
+      </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+        <div class="card rec-pic" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://m.media-amazon.com/images/M/MV5BMzU0NDY0NDEzNV5BMl5BanBnXkFtZTgwOTIxNDU1MDE@._V1_.jpg);">
+      </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+        <div class="card rec-pic" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://cdn.shopify.com/s/files/1/1057/4964/products/deep-throat-vintage-movie-poster-original-22x28-7849.jpg?v=1535851680');">
+      </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+        <div class="card rec-pic" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://img.elo7.com.br/product/original/1DFAE93/poster-cartaz-batman-o-cavaleiro-das-trevas-poster-tematico.jpg);">
+      </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+        <div class="card rec-pic" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images-na.ssl-images-amazon.com/images/I/61bMkkwpduL._SY679_.jpg);">
+      </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+<div class="index-da-massa lp-end">
+  <br>
+  <br><br><br>
+</div>
+
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

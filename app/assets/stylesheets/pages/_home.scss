@@ -46,16 +46,13 @@
 .btn-primary {
   background-color: #ad00d1;
 }
-
 .btn-primary:hover {
   background-color: #7a00aa;
 }
-
 .btn-primary:focus {
   background-color: #7a00aa;
   color: white;
 }
-
 .btn-primary:active {
   background-color: #467370 !important;
 }
@@ -65,4 +62,19 @@
 }
 .text-uppercase {
   color: $purple !important;
+}
+// RANKING PART
+.ranking {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.ranking-pic {
+  height: 14vh;
+  width: 9vw;
+}
+.rec-pic {
+  height: 20vh;
+  width: 18vw;
+  margin: 20px;
 }
