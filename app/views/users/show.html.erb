@@ -1,0 +1,32 @@
+<% if @points.empty? %>
+    <div class="container-nothing">
+      <%  if @user.unsername.nil? %>
+        <h2><%= @user.email %> ainda não avaliou nenhum filme. :/</h2>
+      <% else %>
+          <h2><%= @user.username %> ainda não avaliou nenhum filme. :/</h2>
+      <% end %>
+      <br>
+      <br>
+      <p class="text-center"> <%= link_to "AVALIE AGORA ", battlepage_path, class: "btn-purple"  %></p>
+    </div>
+<% else %>
+  <div class="container">
+    <%  if @user.unsername.nil? %>
+      <h1>Os filmes preferido de <%= @user.email %></h1>
+    <% else %>
+      <h1>Os filmes preferido de <%= @user.username %></h1>
+    <% end %>
+    <% i = 1 %>
+    <% @points.each do |point| %>
+      <div class="movie-list-item">
+        <div class="name">
+          <h3><%= i %>. <%= point.movie.title %></h3>
+          <h5>(<%= point.movie.year %>)</h5>
+        </div>
+        <div class="card recommendation">
+        </div>
+        <% i += 1 %>
+      </div>
+      <% end %>
+  </div>
+<% end %>
