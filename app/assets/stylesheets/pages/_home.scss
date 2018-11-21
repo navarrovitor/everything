@@ -69,21 +69,12 @@
   align-items: center;
   justify-content: center;
 }
-#rank-list {
-  list-style-type: none;
-  // width: 500px;
-  li img {
-    float: left;
-    margin: 0 15px 0 0;
-    height: 175px;
-  }
-
-  li p {
-    font: 200 12px/1.5 Georgia, Times New Roman, serif;
-  }
-
-  li {
-    padding: 10px;
-    overflow: auto;
-  }
+.ranking-pic {
+  height: 14vh;
+  width: 9vw;
+}
+.rec-pic {
+  height: 20vh;
+  width: 18vw;
+  margin: 20px;
 }
