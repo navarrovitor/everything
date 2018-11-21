@@ -39,7 +39,7 @@ class UsersController < ApplicationController
     else
       @user = current_user
     end
-    @points = Point.where("user_id = ?", params[:id])
+    @points = Point.where("user_id = ?", @user.id)
     authorize @user
     @number_of_ratings = ratings_count(@user)
     @user_level = user_level(@number_of_ratings)
