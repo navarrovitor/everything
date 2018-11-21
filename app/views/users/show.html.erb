@@ -1,6 +1,6 @@
 <% if @points.empty? %>
     <div class="container-nothing">
-      <%  if @user.unsername.nil? %>
+      <%  if @user.username.nil? %>
         <h2><%= @user.email %> ainda não avaliou nenhum filme. :/</h2>
       <% else %>
           <h2><%= @user.username %> ainda não avaliou nenhum filme. :/</h2>
@@ -11,7 +11,7 @@
     </div>
 <% else %>
   <div class="container">
-    <%  if @user.unsername.nil? %>
+    <%  if @user.username.nil? %>
       <h1>Os filmes preferido de <%= @user.email %></h1>
     <% else %>
       <h1>Os filmes preferido de <%= @user.username %></h1>
