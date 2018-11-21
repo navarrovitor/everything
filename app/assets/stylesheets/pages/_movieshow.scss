@@ -1,0 +1,57 @@
+.wrapper-movieshow {
+  background-color: black;
+  min-height: 80vh;
+  padding: 20px 250px;
+}
+
+.container-movieshow {
+  background-color: rgba(100,100,100,0.5);
+  padding: 50px 50px;
+}
+
+.movieshow-horbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movieshow-details {
+  padding-left: 50px;
+}
+
+.movieshow-title {
+  margin: 20px 0;
+}
+
+.movieshow-poster {
+  width: 38%;
+
+}
+
+.movieshow-description {
+  font-size: 25px;
+}
+
+.movieshow-year {
+  font-size: 25px;
+}
+
+.movieshow-length {
+  font-size: 25px;
+}
+
+.movieshow-totalbattles {
+  font-size: 25px;
+}
+
+.movieshow-winpercent {
+  font-size: 25px;
+}
+
+.movieshow-awareness {
+  font-size: 25px;
+}
+
+.movieshow-statistics {
+
+}
