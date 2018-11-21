@@ -7,7 +7,7 @@
     </div>
 <% else %>
   <div class="container">
-    <h1>Seus filmes preferidos</h1>
+    <h1>Os filmes preferido de <%= @user.username %></h1>
     <% i = 1 %>
     <% @points.each do |point| %>
       <div class="movie-list-item">
