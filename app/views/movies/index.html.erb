@@ -1,25 +1,18 @@
-<div class="wrapper-showall">
-  <div class="container-showall">
+<div class="wrapper-moviesindex">
+  <div class="container-moviesindex">
     <table id="tablemovies">
+      <tr class="moviesindex-header">
+        <td class="header-title">Title</td>
+        <td class="header-winrate">Win rate(%)</td>
+        <td class="header-awareness">Awareness(%)</td>
+      </tr>
       <% @movies.each do |movie| %>
-        <tr class="each-movie">
-          <td class="table-movie-name"> <%= movie.title %> </td>
-          <td class="table-movie-battlestotal">
-            <% if movie.battles_total != 0  && !movie.battles_total.nil? %>
-              <%=movie.battles_total%>
-            <% else %>
-              0
-            <% end %>
-          <td class="table-movie-battleswon">
-            <% if movie.battles_total != 0  && !movie.battles_total.nil? %>
-              <%=100*(movie.battles_won.to_f/movie.battles_total).round(2)%>%
-            <% else %>
-              -
-            <% end %>
-          </td>
+        <tr class="each-movie-moviesindex">
+          <td class="moviesindex-name"> <%= movie.title %> </td>
+          <td class="moviesindex-battleswon"> <%= @movies_winrate[@movies.index(movie)] %> </td>
+          <td class="moviesindex-awareness"> <%= @movies_awareness[@movies.index(movie)] %> </td>
         </tr>
       <% end %>
     </table>
   </div>
 </div>
-
