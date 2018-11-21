@@ -1,0 +1,11 @@
+<div class="wrapper-recommendations text-center">
+  <div class="container-recommendations text-center">
+    <% @recommendations.each do |rec| %>
+      <div class="each-recommendation">
+        <div class="rec-poster"></div>
+        <div class="rec-title"><%= rec.title %></div>
+        <div class="rec-seen-btn btn btn-danger">Seen already</div>
+      </div>
+    <% end %>
+  </div>
+</div>

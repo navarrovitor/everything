@@ -1,0 +1,39 @@
+.wrapper-recommendations {
+  min-height: calc(100vh-70px);
+  background-color: black;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-recommendations {
+  padding: 20px 20px;
+  width: 60%;
+}
+
+.each-recommendation {
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.rec-poster {
+  flex: 0 0 20%;
+
+}
+
+.rec-title {
+  font-size: 40px;
+  text-align: left;
+  flex: 0 0 40%;
+}
+
+.rec-seen-btn {
+  flex: 0 0 20%;
+  padding-right: 20px;
+}
+
+
