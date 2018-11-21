@@ -6,6 +6,13 @@ class MoviesController < ApplicationController
   def show
     @movie = Movie.find(params[:id])
     authorize @movie
+
+    @totalbattles = @movie.battles_total
+    @winpercent = ((@movie.battles_won.to_f / @totalbattles) * 100).round(1)
+
+    users_seen = Point.all.select {|point| point.movie == @movie}.length
+    users_not_seen = User.all.select { |user| user.not_seen.include?(@movie.id) }.length
+    @awareness = ((users_seen.to_f / (users_seen + users_not_seen)) * 100).round(1)
   end
 
   def new

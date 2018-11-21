@@ -47,13 +47,12 @@ function getPosters(i, api_url, movie_name_divs, baseURL, apiKey, recommendation
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.clear();
   let recommendation_image_cards = document.getElementsByClassName('recommendation');
   let movie_name_divs = document.getElementsByClassName('name');
   let baseURL = 'https://api.themoviedb.org/3/';
   let apiKey = '9d3a38e6213072912904012a81c6dddc';
   let api_url = ''.concat(baseURL, 'configuration?api_key=', apiKey);
   for (let i = 0; i < recommendation_image_cards.length; i++){
-    getPosters(i, api_url, movie_name_divs, baseURL, apiKey, recommendation_image_cards); 
+    getPosters(i, api_url, movie_name_divs, baseURL, apiKey, recommendation_image_cards);
   }
 });

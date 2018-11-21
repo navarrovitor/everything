@@ -1,5 +1,23 @@
-<h1> <%= @movie.title %> </h1>
+<div class="wrapper-movieshow">
+  <div class="container-movieshow">
+    <div class="movieshow-horbox">
+      <%= image_tag "", class: "movieshow-poster"%>
+      <div class="movieshow-details">
+        <div class="movieshow-texts">
+          <h1 class="movieshow-title"> <%= @movie.title %> </h1>
+          <p class="movieshow-description"></p>
+          <p class="movieshow-year"> <strong>Year:</strong> <%= @movie.year %> </p>
+          <!-- <p class="movieshow-length"> <strong>Length:</strong> <%= @movie.length %> minutes </p> -->
+          <br>
+          <br>
+          <p class="movieshow-totalbattles"> <strong>Total battles:</strong> <%= @totalbattles %> </p>
+          <p class="movieshow-winpercent"> <strong>Win percentage:</strong> <%= @winpercent %>%  </p>
+          <p class="movieshow-awareness"> <strong>Awareness:</strong> <%= @awareness %>%  </p>
+        </div>
+      </div>
+      <div class="movieshow-statistics">
 
-<p> Year: <%= @movie.year %> </p>
-<p> Cast: <%= @movie.actors %> </p>
-<p> Length: <%= @movie.length %> minutes </p>
+      </div>
+    </div>
+  </div>
+</div>
