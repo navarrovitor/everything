@@ -6,6 +6,12 @@
     <h1 class="movie2-titles"> <%= movie.title %> </h1>
   <% end %>
   <% @movie1.each do |movie| %>
+    <h1 class="movie1-years"> <%= movie.year %> </h1>
+  <% end %>
+  <% @movie2.each do |movie| %>
+    <h1 class="movie2-years"> <%= movie.year %> </h1>
+  <% end %>
+  <% @movie1.each do |movie| %>
     <h1 class="movie1-ids"> <%= movie.id %> </h1>
   <% end %>
   <% @movie2.each do |movie| %>
@@ -42,7 +48,7 @@
             <div class="card-description">
                 <div class="name">
                   <h2 class="movie-title"><%= @movie1[0].title %></h2>
-                  <p>(<%= @movie1[0].year %>)</p>
+                  <p class="movie-year">(<%= @movie1[0].year %>)</p>
                 </div>
             </div>
           </div>
@@ -66,7 +72,7 @@
             <div class="card-description">
                 <div class="name">
                   <h2 class="movie-title"><%= @movie2[0].title %></h2>
-                  <p>(<%= @movie2[0].year %>)</p>
+                  <p class="movie-year">(<%= @movie2[0].year %>)</p>
                 </div>
             </div>
           </div>

@@ -110,10 +110,10 @@ class BattlesController < ApplicationController
       # --> Build the suggestion list by order of relevance
       # Build a hash with keys = titles of suggested movies
       suggestions_ordered = {}
-      # The value of each hash pair is the relevance of that movie
       suggestions.each do |sugg|
         suggestions_ordered[sugg.title.to_s] = 0
       end
+      # The value of each hash pair is the relevance of that movie
       # The relevance will be given by relevance points
       # Relevance points are proportional to the position of given movie on each recommender list and the recommender relevance
       suggestions_ordered.each do |k,v|
@@ -129,7 +129,8 @@ class BattlesController < ApplicationController
           # Get the position of the suggestion movie in the user list
           movie_position = top_user_movies_list.index(Point.find_by(user_id: user.id, movie_id: movie.id))
 
-          # Give points: 5 if top 3, 3 if up to 10, 0 if not top 10
+          # Give points to each movie
+          # Points for the position on each recommenders list
           if !movie_position.nil?
             if movie_position + 1 <= qt_top_movies
               points_for_positions << pts_top_movies
@@ -153,9 +154,9 @@ class BattlesController < ApplicationController
       # Order the hash by relevance
       suggestions_ordered = suggestions_ordered.sort_by { |_, v| -v }
 
-      # --> Send to view: array with names of movies suggested in order of relevance
+      # --> Send to view: array of movies suggested in order of relevance
       @recommendations = []
-      suggestions_ordered.each do |k, v|
+      suggestions_ordered.each do |k, _|
         @recommendations << Movie.find_by(title: k.to_s)
       end
     end
