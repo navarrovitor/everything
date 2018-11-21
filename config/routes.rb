@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'battles', to: 'battles#battlepage', as: 'battlepage'
   get 'playershow', to: 'battles#showmovies', as: 'playershow'
   get 'apitest', to: 'battles#apitest', as: 'apitest'
+  get 'recommendations', to: 'battles#recommendations', as: 'recommend'
 
   # get 'landing', to: 'battles#landing', as: 'landing_page'
   root to: 'pages#home'

@@ -9,6 +9,10 @@ class BattlePolicy < ApplicationPolicy
     return true
   end
 
+  def recommendations?
+    return true
+  end
+
   def apitest?
     return true
   end
