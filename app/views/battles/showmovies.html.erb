@@ -1,9 +1,16 @@
 <% if @points.empty? %>
     <div class="container-nothing">
-      <h2>Você ainda não avaliou nenhum filme. :/</h2>
+      <h2>You haven't rated enough films yet. :/</h2>
       <br>
-      <br>
-      <p class="text-center"> <%= link_to "AVALIE AGORA ", battlepage_path, class: "btn-purple"  %></p>
+      <h3>1. Tell us which movies you prefer.</h3>
+      <h3>2. See your movie ranking.</h3>
+      <h3>3. Get recommendations.</h3>
+      <h3>4. Connect to users with similar taste!</h3>
+    </div>
+    <div class="container-nothing">
+      <p class="text-center"> 
+        <%= link_to "RATE MOVIES NOW!", battlepage_path, class: "btn-purple"  %>
+      </p>
     </div>
 <% else %>
   <div class="container">
