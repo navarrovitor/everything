@@ -90,4 +90,16 @@ class ApplicationController < ActionController::Base
     end
     return nil
   end
+
+  def weightedaverage(values, weights)
+    raise "Arrays have different sizes. Cannot compute weighted average" if values.length != weights.length
+    sum_product = 0
+    sum_weights = 0
+    (0..values.length - 1).to_a.each do |counter|
+      sum_product += values[counter] * weights[counter]
+      sum_weights += weights[counter]
+    end
+    return sum_product / sum_weights
+  end
+
 end
