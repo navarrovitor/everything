@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   # resources :points
   patch 'point', to: 'points#update', as: 'updatepoints'
+  patch 'seenalready', to: 'points#seen_already', as: 'seenalready'
 
   get 'battles', to: 'battles#battlepage', as: 'battlepage'
   get 'playershow', to: 'battles#showmovies', as: 'playershow'

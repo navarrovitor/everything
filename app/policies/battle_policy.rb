@@ -13,6 +13,10 @@ class BattlePolicy < ApplicationPolicy
     return true
   end
 
+  def seen_already?
+    return true
+  end
+
   def apitest?
     return true
   end
