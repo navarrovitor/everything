@@ -4,7 +4,13 @@
       <div class="each-recommendation">
         <div class="rec-poster"></div>
         <div class="rec-title"><%= rec.title %></div>
-        <div class="rec-seen-btn btn btn-danger">Seen already</div>
+        <form action="/seenalready" method="post">
+          <input name="_method" type="hidden" value="patch"/>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <%= hidden_field_tag :user_id, current_user.id %>
+          <%= hidden_field_tag :movie_id, rec.id %>
+          <input type="submit" value="Seen already" class="btn btn-danger">
+        </form>
       </div>
     <% end %>
   </div>
