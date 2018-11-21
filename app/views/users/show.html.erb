@@ -1,0 +1,24 @@
+<% if @points.empty? %>
+    <div class="container-nothing">
+      <h2>Você ainda não avaliou nenhum filme. :/</h2>
+      <br>
+      <br>
+      <p class="text-center"> <%= link_to "AVALIE AGORA ", battlepage_path, class: "btn-purple"  %></p>
+    </div>
+<% else %>
+  <div class="container">
+    <h1>Os filmes preferido de <%= @user.username %></h1>
+    <% i = 1 %>
+    <% @points.each do |point| %>
+      <div class="movie-list-item">
+        <div class="name">
+          <h3><%= i %>. <%= point.movie.title %></h3>
+          <h5>(<%= point.movie.year %>)</h5>
+        </div>
+        <div class="card recommendation">
+        </div>
+        <% i += 1 %>
+      </div>
+      <% end %>
+  </div>
+<% end %>
