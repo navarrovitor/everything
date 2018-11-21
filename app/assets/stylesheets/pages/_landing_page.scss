@@ -1,28 +1,60 @@
 .lp-title {
   padding-bottom: 40px;
-  font-size:75px;
+  font-size: 75px;
   font-family: 'Cabin', sans-serif;
 }
 .lp-subtitle {
   padding-bottom: 40px;
-  font-size:30px;
+  font-size: 30px;
   font-family: 'Cabin', sans-serif;
   // font-family: 'Lobster Two', cursive;
   letter-spacing: 2px;
 }
-.div-da-massa {
+.div-da-massa1 {
+  background-image: linear-gradient(rgba(2,2,2,0.8), rgba(27,27,27,0.8) 30%);
+  background-size: cover;
+}
+.div-da-massa2 {
+  background-image: linear-gradient(rgba(2,2,2,0.8), rgba(27,27,27,0.8) 30%);
+  background-size: cover;
+}
+.div-da-massa3 {
   background-image: linear-gradient(rgba(2,2,2,0.8), rgba(27,27,27,0.8) 30%);
   background-size: cover;
 }
 #header-lp {
   text-align: center;
 }
-#arrow {
+.arrowc1 {
   text-align: center;
   background-image: linear-gradient(transparent, rgba(2,2,2,0.8) 50%);
 }
-.arrow  {
+.arrowc2 {
+  text-align: center;
+  background-image: linear-gradient(rgba(27,27,27,0.8), rgba(2,2,2,0.8) 70%);
+}
+.arrowc3 {
+  text-align: center;
+  background-image: linear-gradient(rgba(27,27,27,0.8), rgba(2,2,2,0.8) 50%);
+}
+.lp-end {
+  text-align: center;
+  background-image: linear-gradient(rgba(27,27,27,0.8), rgba(2,2,2,0.8) 50%);
+}
+.arrow1  {
   position: relative;
+  left: -600px;
+  font-size: 31px;
+  animation: bouncearrow 1s infinite;
+}
+.arrow2  {
+  position: relative;
+  font-size: 31px;
+  animation: bouncearrow 1s infinite;
+}
+.arrow3  {
+  position: relative;
+  left: 600px;
   font-size: 31px;
   animation: bouncearrow 1s infinite;
 }
@@ -31,7 +63,6 @@
     50%{top: 20px;}
     100%{top: 0px;}
 }
-
 @keyframes bouncearrow{
     0%{top: 0px;}
     50%{top: 20px;}
