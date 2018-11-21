@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
-    authorize @users
+    @users = policy_scope(User)
+    # @users = User.all
+    # authorize @user
   end
 
   def show
-    @user = User.find(userparams[:id])
+    @points = Point.where("user_id = ?", params[:id])
+    @user = User.find(params[:id])
     authorize @user
   end
 

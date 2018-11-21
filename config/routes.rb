@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :movies
   resources :profiles
   resources :users, only: [:index, :show]
+  resources :points, only: [:index, :show]
 
 
   # resources :points
