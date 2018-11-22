@@ -64,17 +64,16 @@
 .container-purple {
   margin: 20px;
   padding: 20px;
-  background-color: rgb(162,0,255);
+  background-color: rgba(162,0,255,0.8);
 }
 
-.container-white {
+.container-black {
   padding: 20px;
   display: flex;
   justify-content: space-around;
-  color: black;
+  color: white;
   margin: 0px;
   padding: 20px;
-  background-color: rgb(240,240,240);
   h3 {
     margin: 0;
     text-shadow: none;

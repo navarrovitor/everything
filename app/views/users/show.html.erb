@@ -2,13 +2,15 @@
 
 <% if @points.empty? %>
 <!-- user hasn't rated movies -->
-  <div class="container-nothing">
+  <div class="container-purple">
     <% if @user == current_user %>
       <!-- user hasn't rated movies 
         he is seeing his own page -->
       <h2><%= @user_level[2] %></h2>
       <h3><%= @user_level[3] %></h3>
       <br>
+  </div>
+  <div>
       <p class="text-center"> <%= link_to "RANK NOW ", battlepage_path, class: "btn-purple"  %></p>
     <% else %>
       <!-- user is seeing someone else's page, 
