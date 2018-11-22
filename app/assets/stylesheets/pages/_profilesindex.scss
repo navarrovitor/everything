@@ -1,7 +1,7 @@
 .wrapper-profiles {
   min-height: calc(100vh - 140px);
   background-color: black;
-  padding: 50px 0;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -18,7 +18,7 @@
 }
 
 .each-profile {
-  background-color: rgba(200,200,200,0.5);
+  background-color: rgba(148,2,204,0.7);
 
   &:hover {
     opacity: 0.9;

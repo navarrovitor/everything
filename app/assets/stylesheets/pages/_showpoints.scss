@@ -1,7 +1,9 @@
 .wrapper-usershow-none {
   min-height: calc(100vh - 140px);
   max-height: calc(100vh - 140px);
-  padding: 220px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .wrapper-usershow-list {
@@ -31,6 +33,10 @@
 
 .tablemovies {
 
+}
+
+.pagetitle {
+  margin-bottom: 50px;
 }
 
 .each-movie {
@@ -66,9 +72,18 @@
   padding-right: 100px;
 }
 
-.container-purple {
+.container-purple-none {
   margin: 20px;
-  padding: 50px 30px;
+  padding: 3vw 55vh;
+  background-color: rgba(162,0,255,0.8);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-purple-list {
+  margin: 20px;
+  padding: 20px 20px;
   background-color: rgba(162,0,255,0.8);
   display: flex;
   justify-content: space-around;
