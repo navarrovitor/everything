@@ -1,7 +1,7 @@
-.wrapper-showall {
+.wrapper-usershow {
   min-height: calc(100vh - 140px);
-  background-color: black;
-  padding: 30px 400px;
+  max-height: calc(100vh - 140px);
+  padding: 220px 20px;
 }
 
 .container-nothing {
@@ -63,7 +63,7 @@
 
 .container-purple {
   margin: 20px;
-  padding: 20px;
+  padding: 50px 30px;
   background-color: rgba(162,0,255,0.8);
   display: flex;
   justify-content: space-around;
@@ -84,4 +84,13 @@
   h4{
     text-shadow: none;
   }
+}
+
+.rank-now-btn {
+  margin-top: 50px;
+}
+
+.desc-highlight {
+  font-size: 30px;
+  font-weight: bold;
 }
