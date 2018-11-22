@@ -6,11 +6,11 @@
     <% i = 1 %>
     <% @recommendations.each do |rec| %>
       <div class="each-recommendation">
-        <%= link_to movie_path(rec), class: "" do %>
+        <%= link_to movie_path(rec), class: "remove-link-styling" do %>
           <div class="card recommendation rec-poster">
           </div>
         <% end %>
-        <%= link_to movie_path(rec), class: "" do %>
+        <%= link_to movie_path(rec), class: "remove-link-styling" do %>
           <div class="name">
             <h3>
               <%= i %>. <%= rec.title %>
