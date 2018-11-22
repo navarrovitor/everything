@@ -39,10 +39,10 @@ class UsersController < ApplicationController
     else
       @user = current_user
     end
-    @points = Point.where("user_id = ?", params[:id])
-    authorize @user
-    @number_of_ratings = ratings_count(@user)
+    @points = Point.where("user_id = ?", @user.id).order("points DESC")
+    @number_of_ratings = ratings_count(@user).nil? ? 0 : ratings_count(@user)
     @user_level = user_level(@number_of_ratings)
+    authorize @user
   end
 
   private
@@ -67,10 +67,10 @@ class UsersController < ApplicationController
       message2 = "Rate #{3 - ratings} more movie#{ratings < 2 ? 's' : ''} to get your first recommendations."
     when 3..9
       rank = "Beginner"
-      next_rank = "Beginner (#{10 - ratings} more movie#{ratings < 9 ? 's' : ''})"
+      next_rank = "Film Student (#{10 - ratings} more movie#{ratings < 9 ? 's' : ''})"
       message2 = "Well done! Rate more movies to get better recommendations."
     when 10..49
-      rank = "Film student"
+      rank = "Film Student"
       next_rank = "Cinephile (#{50 - ratings} more movie#{ratings < 49 ? 's' : ''})"
       message2 = "Keep going to get even better recommendations!"
     else
