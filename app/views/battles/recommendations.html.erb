@@ -3,13 +3,17 @@
     <% i = 1 %>
     <% @recommendations.each do |rec| %>
       <div class="each-recommendation">
-        <div class="card recommendation">
-        </div>
-        <div class="name">
-          <h3>
-            <%= i %>. <%= rec.title %>
-          </h3>
-        </div>
+        <%= link_to movie_path(rec), class: "" do %>
+          <div class="card recommendation rec-poster">
+          </div>
+        <% end %>
+        <%= link_to movie_path(rec), class: "" do %>
+          <div class="name">
+            <h3>
+              <%= i %>. <%= rec.title %>
+            </h3>
+          </div>
+        <% end %>
         <form action="/seenalready" method="post">
           <input name="_method" type="hidden" value="patch"/>
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>

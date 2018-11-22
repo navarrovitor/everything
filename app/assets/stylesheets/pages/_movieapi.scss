@@ -1,6 +1,6 @@
 .wrapper-movie-info {
   background-color: black;
-  height: 80vh;
+  min-height: calc(100vh - 140px);
   padding: 50px 400px;
 }
 
