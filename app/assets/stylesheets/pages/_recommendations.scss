@@ -18,6 +18,14 @@
   padding: 20px 0;
 }
 
+.remove-link-styling {
+  color: white;
+
+  &:hover {
+    color: rgba(162,0,255,1);
+  }
+}
+
 .rec-poster {
   flex: 0 0 20%;
 }
