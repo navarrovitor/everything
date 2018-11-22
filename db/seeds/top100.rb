@@ -427,9 +427,9 @@ m.save
 # -------------------------
 # Movie 64
 m = Movie.new
-m.title = "Misson: Impossible II"
-m.year = 2000
-m.relevance = 7
+m.title = "Bohemian Rhapsody"
+m.year = 2018
+m.relevance = 10
 m.save
 # -------------------------
 # Movie 65
