@@ -78,38 +78,20 @@ Array.prototype.forEach.call(allPercentages, pct => {
 //Profile styling according to position
 profileList = document.getElementsByClassName("each-profile")
 profileTable = document.getElementById("profiletable")
-highlights = Math.floor(profileList.length * 0.35) - 3
-l(highlights)
-
 count = 0;
 
 Array.prototype.forEach.call(profileList, profile => {
   if (count === 0) {
-    profile.classList.add("gold-profile")
-    profile.classList.add("big-profiles")
     profile.getElementsByClassName("profile-position")[0].innerHTML = `<span class='profile-position-number'>1</span><span class='profile-position-placer'>st</span>`
   } else if (count === 1) {
-    profile.classList.add("silver-profile")
-    profile.classList.add("big-profiles")
     profile.getElementsByClassName("profile-position")[0].innerHTML = `<span class='profile-position-number'>2</span><span class='profile-position-placer'>nd</span>`
   } else if (count === 2) {
-    profile.classList.add("bronze-profile")
-    profile.classList.add("big-profiles")
     profile.getElementsByClassName("profile-position")[0].innerHTML = `<span class='profile-position-number'>3</span><span class='profile-position-placer'>rd</span>`
-  } else if (count > 2 && count < highlights + 3) {
-    profile.classList.add("highlight-profile")
-    profile.classList.add("mid-profiles")
-    profile.getElementsByClassName("profile-position")[0].innerHTML = `<span class='profile-position-number'>${count+1}</span><span class='profile-position-placer'>th</span>`
   } else {
-    profile.classList.add("small-profiles")
     profile.getElementsByClassName("profile-position")[0].innerHTML = `<span class='profile-position-number'>${count+1}</span><span class='profile-position-placer'>th</span>`
   }
   count += 1;
 });
 
-newRow = profileTable.insertRow(3);
-newRow.classList.add("big-space-row")
-newRow = profileTable.insertRow(highlights + 4);
-newRow.classList.add("small-space-row")
 
 });
