@@ -103,3 +103,6 @@ a.btn-purple:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+.purple-button > input {
+  background-color: purple;
+}
