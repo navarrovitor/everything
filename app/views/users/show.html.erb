@@ -23,7 +23,9 @@
     <% @points.each do |point| %>
       <div class="movie-list-item">
         <div class="name">
-          <h3><%= i %>. <%= point.movie.title %></h3>
+          <%= link_to movie_path(point.movie), class: "navbar-wagon-brand index-da-massa" do %>
+            <h3><%= i %>. <%= point.movie.title %></h3>
+          <% end %>
           <h5>(<%= point.movie.year %>)</h5>
         </div>
         <div class="card recommendation">
