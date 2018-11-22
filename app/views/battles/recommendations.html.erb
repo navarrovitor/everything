@@ -9,7 +9,7 @@
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
           <%= hidden_field_tag :user_id, current_user.id %>
           <%= hidden_field_tag :movie_id, rec.id %>
-          <input type="submit" value="Seen already" class="btn btn-danger">
+          <input type="submit" value="Seen it!" class="btn btn-green">
         </form>
       </div>
     <% end %>
