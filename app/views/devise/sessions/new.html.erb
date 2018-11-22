@@ -1,4 +1,4 @@
-<h2>Log in</h2>
+<h2 class="lp-title">Log in</h2>
 
 <div class="container">
   <div class="row">
@@ -6,12 +6,14 @@
 
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-inputs">
+        <div class="form-inputs mg-auto">
           <%= f.input :email,
+                      :label_html => { :class => 'lp-subtitle' },
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "email" } %>
           <%= f.input :password,
+                      :label_html => { :class => 'lp-subtitle' },
                       required: false,
                       input_html: { autocomplete: "current-password" } %>
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
