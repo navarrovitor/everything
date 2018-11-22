@@ -79,10 +79,11 @@
         </form>
 
       </div>
-  </div>
+    </div>
   </div>
 </div>
 </div>
+
 
 <div class="tab-2">
     <label for="tab2-2">Books (Soon)</label>
@@ -103,16 +104,19 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
-
 </div>
 </div>
-
-
-
+<div class="container">
+  <div class="container-white">
+    <div>
+      <h3><b><%= @user_level[2] %></b></h3>
+      <h4><%= @user_level[3] %></h4>
+    </div>
+    <% if @number_of_ratings >= 3 %>
+    <div>
+      <%= link_to t(".sign_up", default: "GET RECOMMENDATIONS"), recommend_path, class: "button btn-purple hvr-grow index-da-massa" %>
+    </div>
+  <% end %>
+  </div>
+<br>
+</div>
