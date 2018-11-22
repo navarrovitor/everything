@@ -30,7 +30,7 @@
       <div>
         <div class="container">
 
-    <h1 style="text-align: center">Qual é o melhor filme?</h1>
+    <h1 style="text-align: center">Which movie is best?</h1>
     <br>
     <div class="row">
       <div class="col-xs-6">
@@ -44,7 +44,7 @@
           <input type="text" name="movie2_id" id="movie2-select1" style="display: none;">
           <input type="text" name="movies_not_seen_list" id="movies-not-seen-list1" style="display: none;">
           <div class="card poster1" id="vote1-btn" onclick="javascript:event.target.parentNode.submit();">
-            <a href="#" class="btn-red card-left switch-movie" id="switchmovie1">NÃO VI</a>
+            <a href="#" class="btn-red card-left switch-movie" id="switchmovie1">HAVEN'T SEEN IT</a>
             <div class="card-description">
                 <div class="name">
                   <h2 class="movie-title"><%= @movie1[0].title %></h2>
@@ -68,7 +68,7 @@
           <input type="text" name="movies_not_seen_list" id="movies-not-seen-list2" style="display: none;">
           <div class="card poster2" id="vote2-btn" onclick="javascript:event.target .parentNode.submit();">
 
-            <a href="#" class="btn-red card-right switch-movie" id="switchmovie2">NÃO VI</a>
+            <a href="#" class="btn-red card-right switch-movie" id="switchmovie2">HAVEN'T SEEN IT</a>
             <div class="card-description">
                 <div class="name">
                   <h2 class="movie-title"><%= @movie2[0].title %></h2>
@@ -79,10 +79,11 @@
         </form>
 
       </div>
-  </div>
+    </div>
   </div>
 </div>
 </div>
+
 
 <div class="tab-2">
     <label for="tab2-2">Books (Soon)</label>
@@ -103,16 +104,19 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
-
 </div>
 </div>
-
-
-
+<div class="container">
+  <div class="container-black">
+    <div>
+      <h3><b><%= @user_level[2] %></b></h3>
+      <h4><%= @user_level[3] %></h4>
+    </div>
+    <% if @number_of_ratings >= 3 %>
+    <div>
+      <%= link_to t(".sign_up", default: "GET RECOMMENDATIONS"), recommend_path, class: "button btn-purple hvr-grow index-da-massa" %>
+    </div>
+  <% end %>
+  </div>
+<br>
+</div>

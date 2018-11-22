@@ -110,13 +110,6 @@ m.year = 1994
 m.relevance = 9
 m.save
 # -------------------------
-# Movie 17
-m = Movie.new
-m.title = "Star Wars Episode V: The Empire Strikes Back"
-m.year = 1980
-m.relevance = 9
-m.save
-# -------------------------
 # Movie 18
 m = Movie.new
 m.title = 'The Matrix'
@@ -308,7 +301,7 @@ m.save
 # -------------------------
 # Movie 45
 m = Movie.new
-m.title = "Star Wars: Episode IV - A New Hope"
+m.title = "Star Wars Episode IV: A New Hope"
 m.year = 1977
 m.relevance = 10
 m.save
@@ -324,13 +317,6 @@ m.save
 m = Movie.new
 m.title = "Terminator 2: Judgment Day"
 m.year = 1991
-m.relevance = 8
-m.save
-# -------------------------
-# Movie 48
-m = Movie.new
-m.title = 'Snow White and the Seven Dwarfs'
-m.year = 1937
 m.relevance = 8
 m.save
 # -------------------------
@@ -378,7 +364,7 @@ m.save
 # -------------------------
 # Movie 55
 m = Movie.new
-m.title = "Marry Poppins"
+m.title = "Mary Poppins"
 m.year = 1964
 m.relevance = 8
 m.save
@@ -448,7 +434,7 @@ m.save
 # -------------------------
 # Movie 65
 m = Movie.new
-m.title = "Star Wars: Episode I - The Phantom Menace"
+m.title = "Star Wars Episode I: The Phantom Menace"
 m.year = 1999
 m.relevance = 7
 m.save
@@ -476,9 +462,9 @@ m.save
 # -------------------------
 # Movie 69
 m = Movie.new
-m.title = "Star Wars: Episode V - The Empire Strikes Back"
+m.title = "Star Wars Episode V: The Empire Strikes Back"
 m.year = 1980
-m.relevance = 7
+m.relevance = 8
 m.save
 # -------------------------
 # Movie 70
@@ -502,13 +488,6 @@ m.year = 2011
 m.relevance = 7
 m.save
 # -------------------------
-# Movie 73
-m = Movie.new
-m.title = "Indiana Jones and the Last Crusade"
-m.year = 1989
-m.relevance = 7
-m.save
-# -------------------------
 # Movie 74
 m = Movie.new
 m.title = "Inside Out"
@@ -521,13 +500,6 @@ m = Movie.new
 m.title = "Twilight"
 m.year = 2008
 m.relevance = 8
-m.save
-# -------------------------
-# Movie 76
-m = Movie.new
-m.title = "Inside Out"
-m.year = 2015
-m.relevance = 7
 m.save
 # -------------------------
 # Movie 77
@@ -549,13 +521,6 @@ m = Movie.new
 m.title = "Spider-man"
 m.year = 2002
 m.relevance = 8
-m.save
-# -------------------------
-# Movie 80
-m = Movie.new
-m.title = "Independence Day"
-m.year = 1996
-m.relevance = 6
 m.save
 # -------------------------
 # Movie 81

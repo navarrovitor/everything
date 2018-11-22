@@ -1,17 +1,24 @@
 <div class="wrapper-recommendations text-center">
-  <div class="container-recommendations text-center">
+  <div class="container-recommendations purple-background text-center">
+    <% i = 1 %>
     <% @recommendations.each do |rec| %>
       <div class="each-recommendation">
-        <div class="rec-poster"></div>
-        <div class="rec-title"><%= rec.title %></div>
+        <div class="card recommendation">
+        </div>
+        <div class="name">
+          <h3>
+            <%= i %>. <%= rec.title %>
+          </h3>
+        </div>
         <form action="/seenalready" method="post">
           <input name="_method" type="hidden" value="patch"/>
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
           <%= hidden_field_tag :user_id, current_user.id %>
           <%= hidden_field_tag :movie_id, rec.id %>
-          <input type="submit" value="Seen already" class="btn btn-danger">
+          <input type="submit" value="Seen it!" class="btn btn-green">
         </form>
       </div>
+      <% i += 1 %>
     <% end %>
   </div>
 </div>

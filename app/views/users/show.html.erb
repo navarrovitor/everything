@@ -1,23 +1,70 @@
+<!-- show user information -->
+
 <% if @points.empty? %>
 <!-- user hasn't rated movies -->
-  <div class="container-nothing">
+  <div class="container-purple">
     <% if @user == current_user %>
-      <!-- user is seeing his own page -->
-      <h2><%= @user_level[2] %></h2>
-      <h3><%= @user_level[3] %></h3>
-      <br>
-      <p class="text-center"> <%= link_to "AVALIE AGORA ", battlepage_path, class: "btn-purple"  %></p>
+      <!-- user hasn't rated movies 
+        he is seeing his own page -->
+      <h3><%= @user_level[2] %> <%= @user_level[3] %></h3>
+  </div>
+  <div>
+      <p class="text-center"> <%= link_to "RANK NOW ", battlepage_path, class: "btn-purple"  %></p>
     <% else %>
-      <!-- user is seeing someone else's page -->
+      <!-- user is seeing someone else's page, 
+        other person hasn't rated movies -->
+      <div>
+          <% if @user.photo.filename.nil? %>
+            <%= image_tag "anonymous.png", width: 150, height: 150, class: "avatar" %>
+          <% else %>
+            <%= cl_image_tag(@user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar") %>
+          <% end %>
+        </div>
       <h2><%= @user.username.nil? ? "USER #{@user.id}" : @user.username.upcase %> hasn't rated any movies yet.</h2>
     <% end %>
     </div>
 <% else %>
   <div class="container">
     <% if @user == @current_user %>
-      <h1>Os seus filmes preferidos</h1>
+      <!-- user rated movies 
+        is seeing his own page  -->
+      <h1>Your favorite movies</h1>
+      <br>
+      <div class="container-purple">
+        <div>
+          <% if @user.photo.filename.nil? %>
+            <%= image_tag "anonymous.png", width: 150, height: 150, class: "avatar" %>
+          <% else %>
+            <%= cl_image_tag(@user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar") %>
+          <% end %>
+        </div>
+        <div>
+          <h4>RANKING : <%= @user_level[0] %> | FILMS RATED : <%= @number_of_ratings %> </h4>      
+          <br>
+          <h5>NEXT RANKING : <%= @user_level[1] %></h5>
+          <br>
+          <h4><%= @user_level[3] %></h4>
+          <br>
+        </div>
+      </div>
     <% else %>
-      <h1>Os filmes preferidos de <%= @user.username.nil? ? "USER #{@user.id}" : @user.username.upcase %></h1>
+      <!-- user is seeing someone else's page
+      user has rated movies -->
+      <h1><%= @user.username.nil? ? "USER #{@user.id}" : @user.username.upcase %>'s favorite movies</h1>
+      <br>
+      <div class="container-purple">
+        <div>
+          <% if @user.photo.filename.nil? %>
+            <%= image_tag "anonymous.png", width: 150, height: 150, class: "avatar" %>
+          <% else %>
+            <%= cl_image_tag(@user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar") %>
+          <% end %>
+        </div>
+        <div>
+          <h4>RANK: <%= @user_level[0] %> | FILMS RATED: <%= @number_of_ratings %> </h4>
+        </div>   
+        <br>
+      </div>
     <% end %>
     <% i = 1 %>
     <% @points.each do |point| %>
