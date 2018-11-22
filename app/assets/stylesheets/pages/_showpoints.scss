@@ -1,7 +1,12 @@
-.wrapper-usershow {
+.wrapper-usershow-none {
   min-height: calc(100vh - 140px);
   max-height: calc(100vh - 140px);
   padding: 220px 20px;
+}
+
+.wrapper-usershow-list {
+  min-height: calc(100vh - 140px);
+  padding: 20px 20px;
 }
 
 .container-nothing {
