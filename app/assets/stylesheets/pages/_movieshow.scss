@@ -1,7 +1,7 @@
 .wrapper-movieshow {
   background-color: black;
-  min-height: 80vh;
-  padding: 20px 250px;
+  min-height: calc(100vh - 140px);
+  padding: 45px 250px;
 }
 
 .container-movieshow {
@@ -24,7 +24,7 @@
 }
 
 .movieshow-poster {
-  width: 38%;
+  width: 32%;
 
 }
 

@@ -1,7 +1,12 @@
-.wrapper-showall {
-  min-height: 80vh;
-  background-color: black;
-  padding: 30px 400px;
+.wrapper-usershow-none {
+  min-height: calc(100vh - 140px);
+  max-height: calc(100vh - 140px);
+  padding: 220px 20px;
+}
+
+.wrapper-usershow-list {
+  min-height: calc(100vh - 140px);
+  padding: 20px 20px;
 }
 
 .container-nothing {
@@ -63,6 +68,34 @@
 
 .container-purple {
   margin: 20px;
+  padding: 50px 30px;
+  background-color: rgba(162,0,255,0.8);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-black {
   padding: 20px;
-  background-color: rgb(162,0,255);
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  margin: 0px;
+  padding: 20px;
+  h3 {
+    margin: 0;
+    text-shadow: none;
+  }
+  h4{
+    text-shadow: none;
+  }
+}
+
+.rank-now-btn {
+  margin-top: 50px;
+}
+
+.desc-highlight {
+  font-size: 30px;
+  font-weight: bold;
 }

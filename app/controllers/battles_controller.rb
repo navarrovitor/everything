@@ -167,6 +167,8 @@ class BattlesController < ApplicationController
     authorize @battle
 
     @user = current_user
+    @number_of_ratings = ratings_count(@user).nil? ? 0 : ratings_count(@user)
+    @user_level = user_level(@number_of_ratings)
 
     movies_seen = Movie.all.select { |movie| @user.movies.include?(movie) && !@user.not_seen.include?(movie.id) }
     movies_not_seen = Movie.all.select { |movie| !@user.movies.include?(movie) && !@user.not_seen.include?(movie.id) }
